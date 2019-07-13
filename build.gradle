@@ -7,6 +7,7 @@ buildscript {
 plugins {
     id 'kotlin-multiplatform' version '1.3.40' //1.3.31
 }
+
 repositories {
     jcenter()
     maven { url "https://dl.bintray.com/kotlin/ktor" }
@@ -98,3 +99,5 @@ task run(type: JavaExec, dependsOn: [jvmMainClasses, jsJar]) {
     ] }
     args = []
 }
+
+task stage(dependsOn: ['installDist'])
