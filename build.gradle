@@ -100,4 +100,5 @@ task run(type: JavaExec, dependsOn: [jvmMainClasses, jsJar]) {
     args = []
 }
 
-task stage(dependsOn: ['installDist'])
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
