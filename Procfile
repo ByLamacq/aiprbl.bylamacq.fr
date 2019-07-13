@@ -1,1 +1,1 @@
-web: ./build/install/aipr/bin/aipr
+web: ./build/libs
