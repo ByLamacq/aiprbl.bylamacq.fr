@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="aipr-jvm">
+    <output-path>$PROJECT_DIR$/build/libs</output-path>
+    <root id="archive" name="aipr-jvm.jar">
+      <element id="module-output" name="aipr.jvmMain" />
+    </root>
+  </artifact>
+</component>
