@@ -1,1 +1,1 @@
-web: java -jar ./build/libs/aipr-jvm.jar
+web: java -jar ./build/install/aipr/bin/aipr
