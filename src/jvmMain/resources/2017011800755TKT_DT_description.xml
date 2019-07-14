@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<t:dossierConsultation xmlns:t="http://www.reseaux-et-canalisations.gouv.fr/schema-teleservice/2.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ie="http://xml.insee.fr/schema" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gmd="http://www.isotc211.org/2005/gmd">
+    <t:DT>
+        <t:noConsultationDuTeleserviceSeize>2017011800755TKT</t:noConsultationDuTeleserviceSeize>
+        <t:dateDeLaDeclaration>2017-01-18T11:42:56.287+01:00</t:dateDeLaDeclaration>
+        <t:typeEntite>PERSONNE_MORALE</t:typeEntite>
+        <t:declarationConjointeDTDICT>false</t:declarationConjointeDTDICT>
+        <t:responsableDuProjet>
+            <t:denomination>Ville de Saint-Nazaire</t:denomination>
+            <t:pays>France</t:pays>
+        </t:responsableDuProjet>
+        <t:representantDuResponsableDeProjet>
+            <t:denomination>Pouëssel Fabien</t:denomination>
+            <t:complementService>BEAU</t:complementService>
+            <t:voie>place François Blancho</t:voie>
+            <t:codePostal>44600</t:codePostal>
+            <t:commune>SAINT-NAZAIRE</t:commune>
+            <t:personneAcontacter>Pouëssel Fabien</t:personneAcontacter>
+            <t:tel>0240004202</t:tel>
+            <t:fax>0240004011</t:fax>
+            <t:courriel>pouesself@mairie-saintnazaire.fr</t:courriel>
+        </t:representantDuResponsableDeProjet>
+        <t:emplacementDuProjet>
+            <t:adresse>Boulevard Leferme</t:adresse>
+            <t:CP>44600</t:CP>
+            <t:communePrincipale>ST NAZAIRE</t:communePrincipale>
+            <t:codeINSEE>44184</t:codeINSEE>
+            <t:nombreDeCommunes>1</t:nombreDeCommunes>
+            <t:listeDesEmplacementsDesCommunesConcernees>
+                <t:emplacementDeLaCommuneConcernee>
+                    <t:nomDeLaCommune>ST NAZAIRE</t:nomDeLaCommune>
+                    <t:codeCommune>44600</t:codeCommune>
+                    <t:codeINSEE>44184</t:codeINSEE>
+                </t:emplacementDeLaCommuneConcernee>
+            </t:listeDesEmplacementsDesCommunesConcernees>
+        </t:emplacementDuProjet>
+        <t:emprise>
+            <t:geometrie srsName="urn:ogc:def:crs:EPSG::4171" srsDimension="2" gml:id="dtemprise0">
+                <gml:surfaceMembers>
+                    <gml:Polygon gml:id="dt0">
+                        <gml:exterior>
+                            <gml:LinearRing>
+<gml:coordinates>-2.201624161606634,47.2847001693663 -2.2006585664154055,47.28771316261744 -2.1999933786170036,47.29014380987148 -2.199692971224176,47.29117716498384 -2.199585682869595,47.29180298995352 -2.199328190818601,47.29141003095394 -2.2012808388719747,47.2847001693663 -2.2014095848974717,47.28424893337941 -2.2017743653030473,47.28432171363763 -2.201624161606634,47.2847001693663</gml:coordinates>
+                            </gml:LinearRing>
+                        </gml:exterior>
+                    </gml:Polygon>
+                </gml:surfaceMembers>
+            </t:geometrie>
+            <t:surface>18179.43811174482</t:surface>
+            <t:referenceDelaCarte>Photographies aériennes: Géoportail Numérique 2009; Carte: 2012; Limites administratives: 2011</t:referenceDelaCarte>
+        </t:emprise>
+        <t:souhaitsPourLeRecepisse>
+            <t:modeReceptionElectronique>
+                <t:tailleDesPlans>A0</t:tailleDesPlans>
+                <t:couleurDesPlans>true</t:couleurDesPlans>
+                <t:souhaitDePlansVectoriels>true</t:souhaitDePlansVectoriels>
+                <t:formatDesPlansVectoriels>DXF</t:formatDesPlansVectoriels>
+            </t:modeReceptionElectronique>
+        </t:souhaitsPourLeRecepisse>
+        <t:projetEtSonCalendrier>
+            <t:natureDesTravaux>DEC</t:natureDesTravaux>
+            <t:natureDesTravaux>RBL</t:natureDesTravaux>
+            <t:natureDesTravaux>TER</t:natureDesTravaux>
+            <t:natureDesTravaux>SOU</t:natureDesTravaux>
+            <t:decrivezLeProjet>Réalisation d'une piste cyclable bidirectionnel sur trottoir</t:decrivezLeProjet>
+            <t:emploiDeTechniquesSansTranchees>false</t:emploiDeTechniquesSansTranchees>
+            <t:distanceMinimaleEntreLesTravauxEtLaLigneElectrique>5.00</t:distanceMinimaleEntreLesTravauxEtLaLigneElectrique>
+            <t:souhaitLesPlansDesReseauxElectriqueAeriens>false</t:souhaitLesPlansDesReseauxElectriqueAeriens>
+            <t:datePrevuePourLeCommencementDesTravaux>2018-01-08+01:00</t:datePrevuePourLeCommencementDesTravaux>
+            <t:dureeDuChantierEnJours>90</t:dureeDuChantierEnJours>
+        </t:projetEtSonCalendrier>
+        <t:investigationsComplementaires>
+            <t:realisationDInvestigationsComplementaires>true</t:realisationDInvestigationsComplementaires>
+            <t:motifDeRealisationOuNonDInvestigation>CARTOB</t:motifDeRealisationOuNonDInvestigation>
+            <t:dateDesInvestigationsComplementaires>2017-06-05T00:00:00.000+02:00</t:dateDesInvestigationsComplementaires>
+            <t:InvestigationsSusceptibleDeNecessiterUneDICT>true</t:InvestigationsSusceptibleDeNecessiterUneDICT>
+            <t:envoiDesResultatsAuxExploitantsDOuvragesEtAuxEntreprises>true</t:envoiDesResultatsAuxExploitantsDOuvragesEtAuxEntreprises>
+        </t:investigationsComplementaires>
+        <t:signatureDuResponsableDuProjetOuDeSonRepresentant>
+            <t:nomDuSignataire>Fabien Pouëssel</t:nomDuSignataire>
+            <t:nombrePagesJointes>1</t:nombrePagesJointes>
+        </t:signatureDuResponsableDuProjetOuDeSonRepresentant>
+    </t:DT>
+    <t:listeDesOuvrages>
+        <t:ouvrage>
+            <t:contact>
+                <t:nom>
+                    <ie:NomFamille>Correspondant DT-DICT-ATU</ie:NomFamille>
+                </t:nom>
+                <t:societe>GRAND PORT MARITIME NANTES ST-NAZAIRE</t:societe>
+                <t:complement>BP 18609</t:complement>
+                <t:numero>18</t:numero>
+                <t:voie>quai Ernest Renaud</t:voie>
+                <t:codePostal>44186</t:codePostal>
+                <t:commune>NANTES</t:commune>
+                <t:codePays>FR</t:codePays>
+                <t:fax>0240447142</t:fax>
+                <t:courriel>dtdict@nantes.port.fr</t:courriel>
+                <t:telephone>0240442106</t:telephone>
+                <t:telephoneUrgence>0240442155</t:telephoneUrgence>
+                <t:mailUrgence>atu@nantes.port.fr</t:mailUrgence>
+                <t:telEndommagement>0240442155</t:telEndommagement>
+                <t:consigne>En dehors des jours et horaires suivants: Lundi - Vendredi de 9h à 16h30, le numéro d’urgence à contacter est le 02 40 00 45 21, le mail d’urgence est kplacement@nantes.port.fr</t:consigne>
+                <t:gestionDesFichiersDematerialises>
+                    <t:gereLesFichiersDematerialises>true</t:gereLesFichiersDematerialises>
+                    <t:formatDesFichiersDematerialises>XML_PDF</t:formatDesFichiersDematerialises>
+                </t:gestionDesFichiersDematerialises>
+            </t:contact>
+            <t:categorieOuvrage>S</t:categorieOuvrage>
+            <t:classeOuvrage>LIGNES_ELECTRIQUES_ET_ECLAIRAGE_PUBLIC_HORS_TBT</t:classeOuvrage>
+            <t:codeOuvrage>286073</t:codeOuvrage>
+            <t:statut>ACTIF</t:statut>
+            <t:dateCreation>2014-12-21+01:00</t:dateCreation>
+        </t:ouvrage>
+        <t:ouvrage>
+            <t:contact>
+                <t:nom>
+                    <ie:NomFamille>Correspondant DT-DICT-ATU</ie:NomFamille>
+                </t:nom>
+                <t:societe>GRAND PORT MARITIME NANTES ST-NAZAIRE</t:societe>
+                <t:complement>BP 18609</t:complement>
+                <t:numero>18</t:numero>
+                <t:voie>quai Ernest Renaud</t:voie>
+                <t:codePostal>44186</t:codePostal>
+                <t:commune>NANTES</t:commune>
+                <t:codePays>FR</t:codePays>
+                <t:fax>0240447142</t:fax>
+                <t:courriel>dtdict@nantes.port.fr</t:courriel>
+                <t:telephone>0240442106</t:telephone>
+                <t:telephoneUrgence>0240442155</t:telephoneUrgence>
+                <t:mailUrgence>atu@nantes.port.fr</t:mailUrgence>
+                <t:telEndommagement>0240442155</t:telEndommagement>
+                <t:consigne>En dehors des jours et horaires suivants: Lundi - Vendredi de 9h à 16h30, le numéro d’urgence à contacter est le 02 40 00 45 21, le mail d’urgence est kplacement@nantes.port.fr</t:consigne>
+                <t:gestionDesFichiersDematerialises>
+                    <t:gereLesFichiersDematerialises>true</t:gereLesFichiersDematerialises>
+                    <t:formatDesFichiersDematerialises>XML_PDF</t:formatDesFichiersDematerialises>
+                </t:gestionDesFichiersDematerialises>
+            </t:contact>
+            <t:categorieOuvrage>NSFS</t:categorieOuvrage>
+            <t:classeOuvrage>CANALISATIONS_EAUX_USEES_OU_ASSAINISSEMENT</t:classeOuvrage>
+            <t:codeOuvrage>286074</t:codeOuvrage>
+            <t:statut>ACTIF</t:statut>
+            <t:dateCreation>2014-12-21+01:00</t:dateCreation>
+        </t:ouvrage>
+        <t:ouvrage>
+            <t:contact>
+                <t:nom>
+                    <ie:NomFamille>Correspondant DT-DICT-ATU</ie:NomFamille>
+                </t:nom>
+                <t:societe>GRAND PORT MARITIME NANTES ST-NAZAIRE</t:societe>
+                <t:complement>BP 18609</t:complement>
+                <t:numero>18</t:numero>
+                <t:voie>quai Ernest Renaud</t:voie>
+                <t:codePostal>44186</t:codePostal>
+                <t:commune>NANTES</t:commune>
+                <t:codePays>FR</t:codePays>
+                <t:fax>0240447142</t:fax>
+                <t:courriel>dtdict@nantes.port.fr</t:courriel>
+                <t:telephone>0240442106</t:telephone>
+                <t:telephoneUrgence>0240442155</t:telephoneUrgence>
+                <t:mailUrgence>atu@nantes.port.fr</t:mailUrgence>
+                <t:telEndommagement>0240442155</t:telEndommagement>
+                <t:consigne>En dehors des jours et horaires suivants: Lundi - Vendredi de 9h à 16h30, le numéro d’urgence à contacter est le 02 40 00 45 21, le mail d’urgence est kplacement@nantes.port.fr</t:consigne>
+                <t:gestionDesFichiersDematerialises>
+                    <t:gereLesFichiersDematerialises>true</t:gereLesFichiersDematerialises>
+                    <t:formatDesFichiersDematerialises>XML_PDF</t:formatDesFichiersDematerialises>
+                </t:gestionDesFichiersDematerialises>
+            </t:contact>
+            <t:categorieOuvrage>NS</t:categorieOuvrage>
+            <t:classeOuvrage>CANALISATIONS_EAU_POTABLE</t:classeOuvrage>
+            <t:codeOuvrage>286076</t:codeOuvrage>
+            <t:statut>ACTIF</t:statut>
+            <t:dateCreation>2014-12-21+01:00</t:dateCreation>
+        </t:ouvrage>
+        <t:ouvrage>
+            <t:contact>
+                <t:societe>ENEDIS-DRPDL-PAYS DE LA LOIRE</t:societe>
+                <t:agence>Pôle Protection des Tiers</t:agence>
+                <t:numero>21</t:numero>
+                <t:voie>rue de la Chaussée</t:voie>
+                <t:codePostal>44403</t:codePostal>
+                <t:commune>REZE CEDEX</t:commune>
+                <t:codePays>FR</t:codePays>
+                <t:fax>0344625436</t:fax>
+                <t:courriel>6027635.ERDFNAT@demat.protys.fr</t:courriel>
+                <t:telephone>0240410250</t:telephone>
+                <t:telephoneUrgence>0181624701</t:telephoneUrgence>
+                <t:faxUrgence>0811370263</t:faxUrgence>
+                <t:mailUrgence>6027635.ERDFNAT@demat.protys.fr</t:mailUrgence>
+                <t:telEndommagement>0176614701</t:telEndommagement>
+                <t:gestionDesFichiersDematerialises>
+                    <t:gereLesFichiersDematerialises>true</t:gereLesFichiersDematerialises>
+                    <t:formatDesFichiersDematerialises>XML_PDF</t:formatDesFichiersDematerialises>
+                </t:gestionDesFichiersDematerialises>
+            </t:contact>
+            <t:categorieOuvrage>S</t:categorieOuvrage>
+            <t:classeOuvrage>LIGNES_ELECTRIQUES_ET_ECLAIRAGE_PUBLIC_HORS_TBT</t:classeOuvrage>
+            <t:codeOuvrage>ENEDIS</t:codeOuvrage>
+            <t:statut>ACTIF</t:statut>
+            <t:dateCreation>2017-01-01+01:00</t:dateCreation>
+        </t:ouvrage>
+        <t:ouvrage>
+            <t:contact>
+                <t:nom>
+                    <ie:NomFamille>CESBRON</ie:NomFamille>
+                </t:nom>
+                <t:prenom>
+                    <ie:Prenom>Franck</ie:Prenom>
+                </t:prenom>
+                <t:societe>CARENE Bureau d'Etudes de l'Eau et de l'Assainissement</t:societe>
+                <t:numero>84</t:numero>
+                <t:voie> rue de la Berthauderie</t:voie>
+                <t:codePostal>44600</t:codePostal>
+                <t:commune>Saint-Nazaire </t:commune>
+                <t:codePays>FR</t:codePays>
+                <t:fax>0244734595</t:fax>
+                <t:courriel>DT_DICT@agglo-carene.fr</t:courriel>
+                <t:telephone>0240224374</t:telephone>
+                <t:telephoneUrgence>0240224374</t:telephoneUrgence>
+                <t:faxUrgence>0244734595</t:faxUrgence>
+                <t:mailUrgence>DT_DICT@agglo-carene.fr</t:mailUrgence>
+                <t:telEndommagement>0240224374</t:telEndommagement>
+                <t:gestionDesFichiersDematerialises>
+                    <t:gereLesFichiersDematerialises>false</t:gereLesFichiersDematerialises>
+                </t:gestionDesFichiersDematerialises>
+            </t:contact>
+            <t:categorieOuvrage>NS</t:categorieOuvrage>
+            <t:classeOuvrage>CANALISATIONS_EAUX_USEES_OU_ASSAINISSEMENT</t:classeOuvrage>
+            <t:codeOuvrage>EU_CONDUITES</t:codeOuvrage>
+            <t:statut>ACTIF</t:statut>
+            <t:dateCreation>2015-04-19+02:00</t:dateCreation>
+        </t:ouvrage>
+        <t:ouvrage>
+            <t:contact>
+                <t:nom>
+                    <ie:NomFamille>Correspondant DT-DICT-ATU</ie:NomFamille>
+                </t:nom>
+                <t:societe>GRAND PORT MARITIME NANTES ST-NAZAIRE</t:societe>
+                <t:complement>BP 18609</t:complement>
+                <t:numero>18</t:numero>
+                <t:voie>quai Ernest Renaud</t:voie>
+                <t:codePostal>44186</t:codePostal>
+                <t:commune>NANTES</t:commune>
+                <t:codePays>FR</t:codePays>
+                <t:fax>0240447142</t:fax>
+                <t:courriel>dtdict@nantes.port.fr</t:courriel>
+                <t:telephone>0240442106</t:telephone>
+                <t:telephoneUrgence>0240442155</t:telephoneUrgence>
+                <t:mailUrgence>atu@nantes.port.fr</t:mailUrgence>
+                <t:telEndommagement>0240442155</t:telEndommagement>
+                <t:consigne>En dehors des jours et horaires suivants: Lundi - Vendredi de 9h à 16h30, le numéro d’urgence à contacter est le 02 40 00 45 21, le mail d’urgence est kplacement@nantes.port.fr</t:consigne>
+                <t:gestionDesFichiersDematerialises>
+                    <t:gereLesFichiersDematerialises>true</t:gereLesFichiersDematerialises>
+                    <t:formatDesFichiersDematerialises>XML_PDF</t:formatDesFichiersDematerialises>
+                </t:gestionDesFichiersDematerialises>
+            </t:contact>
+            <t:categorieOuvrage>NSFS</t:categorieOuvrage>
+            <t:classeOuvrage>AUTRE</t:classeOuvrage>
+            <t:codeOuvrage>1083_53522_46028</t:codeOuvrage>
+            <t:statut>ACTIF</t:statut>
+            <t:dateCreation>2014-12-21+01:00</t:dateCreation>
+        </t:ouvrage>
+        <t:ouvrage>
+            <t:contact>
+                <t:nom>
+                    <ie:NomFamille>Correspondant DT-DICT-ATU</ie:NomFamille>
+                </t:nom>
+                <t:societe>GRAND PORT MARITIME NANTES ST-NAZAIRE</t:societe>
+                <t:complement>BP 18609</t:complement>
+                <t:numero>18</t:numero>
+                <t:voie>quai Ernest Renaud</t:voie>
+                <t:codePostal>44186</t:codePostal>
+                <t:commune>NANTES</t:commune>
+                <t:codePays>FR</t:codePays>
+                <t:fax>0240447142</t:fax>
+                <t:courriel>dtdict@nantes.port.fr</t:courriel>
+                <t:telephone>0240442106</t:telephone>
+                <t:telephoneUrgence>0240442155</t:telephoneUrgence>
+                <t:mailUrgence>atu@nantes.port.fr</t:mailUrgence>
+                <t:telEndommagement>0240442155</t:telEndommagement>
+                <t:consigne>En dehors des jours et horaires suivants: Lundi - Vendredi de 9h à 16h30, le numéro d’urgence à contacter est le 02 40 00 45 21, le mail d’urgence est kplacement@nantes.port.fr</t:consigne>
+                <t:gestionDesFichiersDematerialises>
+                    <t:gereLesFichiersDematerialises>true</t:gereLesFichiersDematerialises>
+                    <t:formatDesFichiersDematerialises>XML_PDF</t:formatDesFichiersDematerialises>
+                </t:gestionDesFichiersDematerialises>
+            </t:contact>
+            <t:categorieOuvrage>S</t:categorieOuvrage>
+            <t:classeOuvrage>CANALISATIONS_PRODUITS_CHIMIQUES_LIQUIDES_OU_GAZEUX</t:classeOuvrage>
+            <t:codeOuvrage>286067</t:codeOuvrage>
+            <t:statut>ACTIF</t:statut>
+            <t:dateCreation>2014-12-21+01:00</t:dateCreation>
+        </t:ouvrage>
+        <t:ouvrage>
+            <t:contact>
+                <t:nom>
+                    <ie:NomFamille>Correspondant DT-DICT-ATU</ie:NomFamille>
+                </t:nom>
+                <t:societe>GRAND PORT MARITIME NANTES ST-NAZAIRE</t:societe>
+                <t:complement>BP 18609</t:complement>
+                <t:numero>18</t:numero>
+                <t:voie>quai Ernest Renaud</t:voie>
+                <t:codePostal>44186</t:codePostal>
+                <t:commune>NANTES</t:commune>
+                <t:codePays>FR</t:codePays>
+                <t:fax>0240447142</t:fax>
+                <t:courriel>dtdict@nantes.port.fr</t:courriel>
+                <t:telephone>0240442106</t:telephone>
+                <t:telephoneUrgence>0240442155</t:telephoneUrgence>
+                <t:mailUrgence>atu@nantes.port.fr</t:mailUrgence>
+                <t:telEndommagement>0240442155</t:telEndommagement>
+                <t:consigne>En dehors des jours et horaires suivants: Lundi - Vendredi de 9h à 16h30, le numéro d’urgence à contacter est le 02 40 00 45 21, le mail d’urgence est kplacement@nantes.port.fr</t:consigne>
+                <t:gestionDesFichiersDematerialises>
+                    <t:gereLesFichiersDematerialises>true</t:gereLesFichiersDematerialises>
+                    <t:formatDesFichiersDematerialises>XML_PDF</t:formatDesFichiersDematerialises>
+                </t:gestionDesFichiersDematerialises>
+            </t:contact>
+            <t:categorieOuvrage>NSFS</t:categorieOuvrage>
+            <t:classeOuvrage>COMMUNICATIONS_ELECTRONIQUES_ET_LIGNES_ELECTRIQUES_ECLAIRAGE_TBT</t:classeOuvrage>
+            <t:codeOuvrage>286070</t:codeOuvrage>
+            <t:statut>ACTIF</t:statut>
+            <t:dateCreation>2014-12-21+01:00</t:dateCreation>
+        </t:ouvrage>
+        <t:ouvrage>
+            <t:contact>
+                <t:nom>
+                    <ie:NomFamille>Correspondant DT-DICT-ATU</ie:NomFamille>
+                </t:nom>
+                <t:societe>GRAND PORT MARITIME NANTES ST-NAZAIRE</t:societe>
+                <t:complement>BP 18609</t:complement>
+                <t:numero>18</t:numero>
+                <t:voie>quai Ernest Renaud</t:voie>
+                <t:codePostal>44186</t:codePostal>
+                <t:commune>NANTES</t:commune>
+                <t:codePays>FR</t:codePays>
+                <t:fax>0240447142</t:fax>
+                <t:courriel>dtdict@nantes.port.fr</t:courriel>
+                <t:telephone>0240442106</t:telephone>
+                <t:telephoneUrgence>0240442155</t:telephoneUrgence>
+                <t:mailUrgence>atu@nantes.port.fr</t:mailUrgence>
+                <t:telEndommagement>0240442155</t:telEndommagement>
+                <t:consigne>En dehors des jours et horaires suivants: Lundi - Vendredi de 9h à 16h30, le numéro d’urgence à contacter est le 02 40 00 45 21, le mail d’urgence est kplacement@nantes.port.fr</t:consigne>
+                <t:gestionDesFichiersDematerialises>
+                    <t:gereLesFichiersDematerialises>true</t:gereLesFichiersDematerialises>
+                    <t:formatDesFichiersDematerialises>XML_PDF</t:formatDesFichiersDematerialises>
+                </t:gestionDesFichiersDematerialises>
+            </t:contact>
+            <t:categorieOuvrage>NS</t:categorieOuvrage>
+            <t:classeOuvrage>CANALISATIONS_EAUX_USEES_OU_ASSAINISSEMENT</t:classeOuvrage>
+            <t:codeOuvrage>286071</t:codeOuvrage>
+            <t:statut>ACTIF</t:statut>
+            <t:dateCreation>2014-12-21+01:00</t:dateCreation>
+        </t:ouvrage>
+        <t:ouvrage>
+            <t:contact>
+                <t:nom>
+                    <ie:NomFamille>VRIGNON</ie:NomFamille>
+                </t:nom>
+                <t:prenom>
+                    <ie:Prenom>Matthieu</ie:Prenom>
+                </t:prenom>
+                <t:societe>SYNDICAT MIXTE GIGALIS</t:societe>
+                <t:voie>TSA 40111</t:voie>
+                <t:codePostal>69949</t:codePostal>
+                <t:commune>LYON CEDEX 20</t:commune>
+                <t:codePays>FR</t:codePays>
+                <t:fax>0277420048</t:fax>
+                <t:courriel>gigalis@delegation.sogedata.fr</t:courriel>
+                <t:telephone>0228200677</t:telephone>
+                <t:telephoneUrgence>0687143793</t:telephoneUrgence>
+                <t:faxUrgence>0000000000</t:faxUrgence>
+                <t:mailUrgence>matthieu.vrignon@gigalis.fr</t:mailUrgence>
+                <t:telEndommagement>0687143793</t:telEndommagement>
+                <t:gestionDesFichiersDematerialises>
+                    <t:gereLesFichiersDematerialises>true</t:gereLesFichiersDematerialises>
+                    <t:formatDesFichiersDematerialises>XML_PDF</t:formatDesFichiersDematerialises>
+                </t:gestionDesFichiersDematerialises>
+            </t:contact>
+            <t:categorieOuvrage>NS</t:categorieOuvrage>
+            <t:classeOuvrage>COMMUNICATIONS_ELECTRONIQUES_ET_LIGNES_ELECTRIQUES_ECLAIRAGE_TBT</t:classeOuvrage>
+            <t:codeOuvrage>6563_60435_212906</t:codeOuvrage>
+            <t:statut>ACTIF</t:statut>
+            <t:dateCreation>2016-07-31+02:00</t:dateCreation>
+        </t:ouvrage>
+        <t:ouvrage>
+            <t:contact>
+                <t:societe>ILIAD</t:societe>
+                <t:agence>SERVICE DICT</t:agence>
+                <t:numero>16</t:numero>
+                <t:voie>RUE DE LA VILLE L’EVEQUE</t:voie>
+                <t:codePostal>75008</t:codePostal>
+                <t:commune>PARIS</t:commune>
+                <t:codePays>FR</t:codePays>
+                <t:fax>0173502564</t:fax>
+                <t:courriel>DICT@CORP.FREE.FR</t:courriel>
+                <t:telephone>0173922520</t:telephone>
+                <t:telEndommagement>0173922520</t:telEndommagement>
+                <t:gestionDesFichiersDematerialises>
+                    <t:gereLesFichiersDematerialises>true</t:gereLesFichiersDematerialises>
+                    <t:formatDesFichiersDematerialises>XML_PDF</t:formatDesFichiersDematerialises>
+                </t:gestionDesFichiersDematerialises>
+            </t:contact>
+            <t:categorieOuvrage>NS</t:categorieOuvrage>
+            <t:classeOuvrage>COMMUNICATIONS_ELECTRONIQUES_ET_LIGNES_ELECTRIQUES_ECLAIRAGE_TBT</t:classeOuvrage>
+            <t:codeOuvrage>RX_FO_CU_FREE</t:codeOuvrage>
+            <t:statut>ACTIF</t:statut>
+            <t:dateCreation>2015-09-27+02:00</t:dateCreation>
+        </t:ouvrage>
+        <t:ouvrage>
+            <t:contact>
+                <t:nom>
+                    <ie:NomFamille>MME TSAOUSSIS</ie:NomFamille>
+                </t:nom>
+                <t:societe>SFR</t:societe>
+                <t:agence>SERVICE DICT - OUEST</t:agence>
+                <t:complement>CS 50507 CHAMPS SUR MARNE</t:complement>
+                <t:numero>10</t:numero>
+                <t:voie>RUE ALBERT EINSTEIN</t:voie>
+                <t:codePostal>77447</t:codePostal>
+                <t:commune>MARNE LA VALLEE CEDEX 02</t:commune>
+                <t:codePays>FR</t:codePays>
+                <t:fax>0000000000</t:fax>
+                <t:courriel>dictsfr@ncnumericable.com</t:courriel>
+                <t:telephone>0170014129</t:telephone>
+                <t:telephoneUrgence>0170014129</t:telephoneUrgence>
+                <t:faxUrgence>0000000000</t:faxUrgence>
+                <t:mailUrgence>dictsfr@ncnumericable.com</t:mailUrgence>
+                <t:telEndommagement>0805200410</t:telEndommagement>
+                <t:gestionDesFichiersDematerialises>
+                    <t:gereLesFichiersDematerialises>true</t:gereLesFichiersDematerialises>
+                    <t:formatDesFichiersDematerialises>XML_PDF</t:formatDesFichiersDematerialises>
+                </t:gestionDesFichiersDematerialises>
+            </t:contact>
+            <t:categorieOuvrage>NS</t:categorieOuvrage>
+            <t:classeOuvrage>COMMUNICATIONS_ELECTRONIQUES_ET_LIGNES_ELECTRIQUES_ECLAIRAGE_TBT</t:classeOuvrage>
+            <t:codeOuvrage>SFR_DICT_NOV_2015</t:codeOuvrage>
+            <t:statut>ACTIF</t:statut>
+            <t:dateCreation>2016-01-31+01:00</t:dateCreation>
+        </t:ouvrage>
+        <t:ouvrage>
+            <t:contact>
+                <t:nom>
+                    <ie:NomFamille>CESBRON</ie:NomFamille>
+                </t:nom>
+                <t:prenom>
+                    <ie:Prenom>Franck</ie:Prenom>
+                </t:prenom>
+                <t:societe>CARENE BUREAU D'ETUDES EAU ET ASSAINISSEMENT</t:societe>
+                <t:numero>84</t:numero>
+                <t:voie>Rue de la Berthauderie</t:voie>
+                <t:codePostal>44600</t:codePostal>
+                <t:commune>Saint-Nazaire</t:commune>
+                <t:codePays>FR</t:codePays>
+                <t:fax>0244734595</t:fax>
+                <t:courriel>cesbronf@agglo-carene.fr</t:courriel>
+                <t:telephone>0240224374</t:telephone>
+                <t:telephoneUrgence>0240224374</t:telephoneUrgence>
+                <t:telEndommagement>0687714876</t:telEndommagement>
+                <t:gestionDesFichiersDematerialises>
+                    <t:gereLesFichiersDematerialises>false</t:gereLesFichiersDematerialises>
+                </t:gestionDesFichiersDematerialises>
+            </t:contact>
+            <t:categorieOuvrage>NS</t:categorieOuvrage>
+            <t:classeOuvrage>CANALISATIONS_EAUX_USEES_OU_ASSAINISSEMENT</t:classeOuvrage>
+            <t:codeOuvrage>EP_CONDUITES</t:codeOuvrage>
+            <t:statut>ACTIF</t:statut>
+            <t:dateCreation>2014-04-06+02:00</t:dateCreation>
+        </t:ouvrage>
+        <t:ouvrage>
+            <t:contact>
+                <t:societe>ORANGE - M1 PAYS DE LOIRE</t:societe>
+                <t:voie>TSA 40111</t:voie>
+                <t:codePostal>69949</t:codePostal>
+                <t:commune>LYON CEDEX 20</t:commune>
+                <t:codePays>FR</t:codePays>
+                <t:fax>0251824316</t:fax>
+                <t:courriel>FT44M1.FTO@demat.protys.fr</t:courriel>
+                <t:telephone>0228563535</t:telephone>
+                <t:telephoneUrgence>0228563535</t:telephoneUrgence>
+                <t:mailUrgence>FT44M1.FTO@demat.protys.fr</t:mailUrgence>
+                <t:telEndommagement>0810300111</t:telEndommagement>
+                <t:site>www.protys.fr</t:site>
+                <t:gestionDesFichiersDematerialises>
+                    <t:gereLesFichiersDematerialises>true</t:gereLesFichiersDematerialises>
+                    <t:formatDesFichiersDematerialises>XML_PDF</t:formatDesFichiersDematerialises>
+                </t:gestionDesFichiersDematerialises>
+            </t:contact>
+            <t:categorieOuvrage>NS</t:categorieOuvrage>
+            <t:classeOuvrage>COMMUNICATIONS_ELECTRONIQUES_ET_LIGNES_ELECTRIQUES_ECLAIRAGE_TBT</t:classeOuvrage>
+            <t:codeOuvrage>FTO-44</t:codeOuvrage>
+            <t:statut>ACTIF</t:statut>
+            <t:dateCreation>2017-01-08+01:00</t:dateCreation>
+        </t:ouvrage>
+        <t:ouvrage>
+            <t:contact>
+                <t:societe>RTE GMR ATLANTIQUE</t:societe>
+                <t:agence>Pole Patrimoine</t:agence>
+                <t:numero>4</t:numero>
+                <t:voie>RUE DU BOIS FLEURI</t:voie>
+                <t:codePostal>44200</t:codePostal>
+                <t:commune>NANTES CEDEX 2</t:commune>
+                <t:codePays>FR</t:codePays>
+                <t:fax>0972569629</t:fax>
+                <t:courriel>00000000003yv1e9.RTE@demat.protys.fr</t:courriel>
+                <t:telephone>0240802100</t:telephone>
+                <t:telephoneUrgence>0678420778</t:telephoneUrgence>
+                <t:faxUrgence>0811101106</t:faxUrgence>
+                <t:mailUrgence>00000000003yv1e9.RTE@demat.protys.fr</t:mailUrgence>
+                <t:telEndommagement>0678420778</t:telEndommagement>
+                <t:site>www.protys.fr</t:site>
+                <t:gestionDesFichiersDematerialises>
+                    <t:gereLesFichiersDematerialises>true</t:gereLesFichiersDematerialises>
+                    <t:formatDesFichiersDematerialises>XML_PDF</t:formatDesFichiersDematerialises>
+                </t:gestionDesFichiersDematerialises>
+            </t:contact>
+            <t:categorieOuvrage>S</t:categorieOuvrage>
+            <t:classeOuvrage>LIGNES_ELECTRIQUES_ET_ECLAIRAGE_PUBLIC_HORS_TBT</t:classeOuvrage>
+            <t:positionnementOuvrage>AERIEN</t:positionnementOuvrage>
+            <t:codeOuvrage>OA_LA</t:codeOuvrage>
+            <t:statut>ACTIF</t:statut>
+            <t:dateCreation>2017-01-08+01:00</t:dateCreation>
+        </t:ouvrage>
+        <t:ouvrage>
+            <t:contact>
+                <t:societe>GRDF UNITÉ RÉSEAU GAZ PDL PC</t:societe>
+                <t:agence>C2T PDLPC</t:agence>
+                <t:complement>TSA 30604</t:complement>
+                <t:numero>363</t:numero>
+                <t:voie>BD MARCEL PAUL</t:voie>
+                <t:codePostal>44804</t:codePostal>
+                <t:commune>ST HERBLAIN CEDEX</t:commune>
+                <t:codePays>FR</t:codePays>
+                <t:fax>0344623528</t:fax>
+                <t:courriel>14600433C.GRDF@demat.protys.fr</t:courriel>
+                <t:telephone>0228034630</t:telephone>
+                <t:telephoneUrgence>0810300360</t:telephoneUrgence>
+                <t:faxUrgence>0344623528</t:faxUrgence>
+                <t:mailUrgence>14600433C.GRDF@demat.protys.fr</t:mailUrgence>
+                <t:telEndommagement>0800473333</t:telEndommagement>
+                <t:site>www.protys.fr</t:site>
+                <t:gestionDesFichiersDematerialises>
+                    <t:gereLesFichiersDematerialises>true</t:gereLesFichiersDematerialises>
+                    <t:formatDesFichiersDematerialises>XML_PDF</t:formatDesFichiersDematerialises>
+                </t:gestionDesFichiersDematerialises>
+            </t:contact>
+            <t:categorieOuvrage>S</t:categorieOuvrage>
+            <t:classeOuvrage>CANALISATIONS_GAZ_COMBUSTIBLES</t:classeOuvrage>
+            <t:codeOuvrage>GRDFPDLP</t:codeOuvrage>
+            <t:statut>ACTIF</t:statut>
+            <t:dateCreation>2016-12-11+01:00</t:dateCreation>
+        </t:ouvrage>
+        <t:ouvrage>
+            <t:contact>
+                <t:nom>
+                    <ie:NomFamille>CESBRON</ie:NomFamille>
+                </t:nom>
+                <t:prenom>
+                    <ie:Prenom>Franck</ie:Prenom>
+                </t:prenom>
+                <t:societe>CARENE Bureau d'Etudes de l'Eau et de l'Assainissement</t:societe>
+                <t:numero>84</t:numero>
+                <t:voie> Rue de la Berthauderie</t:voie>
+                <t:codePostal>44600</t:codePostal>
+                <t:commune>Saint-Nazaire</t:commune>
+                <t:codePays>FR</t:codePays>
+                <t:fax>0244734595</t:fax>
+                <t:courriel>DT_DICT@agglo-carene.fr</t:courriel>
+                <t:telephone>0240224374</t:telephone>
+                <t:telephoneUrgence>0240224374</t:telephoneUrgence>
+                <t:faxUrgence>0244734595</t:faxUrgence>
+                <t:mailUrgence>DT_DICT@agglo-carene.fr</t:mailUrgence>
+                <t:telEndommagement>0240224374</t:telEndommagement>
+                <t:gestionDesFichiersDematerialises>
+                    <t:gereLesFichiersDematerialises>false</t:gereLesFichiersDematerialises>
+                </t:gestionDesFichiersDematerialises>
+            </t:contact>
+            <t:categorieOuvrage>NS</t:categorieOuvrage>
+            <t:classeOuvrage>CANALISATIONS_EAU_POTABLE</t:classeOuvrage>
+            <t:codeOuvrage>AEP_DISTRI_CONDUITES</t:codeOuvrage>
+            <t:statut>ACTIF</t:statut>
+            <t:dateCreation>2016-04-24+02:00</t:dateCreation>
+        </t:ouvrage>
+        <t:ouvrage>
+            <t:contact>
+                <t:societe>SNCF</t:societe>
+                <t:agence>Accueil DT-DICT-ATL</t:agence>
+                <t:numero>14</t:numero>
+                <t:voie>bis terrasse Bellini</t:voie>
+                <t:codePostal>92807</t:codePostal>
+                <t:commune>PUTEAUX CEDEX</t:commune>
+                <t:codePays>FR</t:codePays>
+                <t:fax>0142916728</t:fax>
+                <t:courriel>accueil-dt-dict-atl@sncf.fr</t:courriel>
+                <t:telephone>0142916750</t:telephone>
+                <t:telephoneUrgence>0240742439</t:telephoneUrgence>
+                <t:faxUrgence>0142916728</t:faxUrgence>
+                <t:mailUrgence>accueil-dt-dict-atl@sncf.fr</t:mailUrgence>
+                <t:telEndommagement>0240742439</t:telEndommagement>
+                <t:site>p/gu.php?e=D110687$5</t:site>
+                <t:gestionDesFichiersDematerialises>
+                    <t:gereLesFichiersDematerialises>true</t:gereLesFichiersDematerialises>
+                    <t:formatDesFichiersDematerialises>XML_PDF</t:formatDesFichiersDematerialises>
+                </t:gestionDesFichiersDematerialises>
+            </t:contact>
+            <t:categorieOuvrage>S</t:categorieOuvrage>
+            <t:classeOuvrage>INSTALLATIONS_DE_TRANSPORT_GUIDE</t:classeOuvrage>
+            <t:positionnementOuvrage>AERIEN_ET_SOUTERRAIN</t:positionnementOuvrage>
+            <t:codeOuvrage>SNCF RÉSEAU (ANCIEN RFF)</t:codeOuvrage>
+            <t:statut>ACTIF</t:statut>
+            <t:dateCreation>2015-03-01+01:00</t:dateCreation>
+        </t:ouvrage>
+        <t:ouvrage>
+            <t:contact>
+                <t:nom>
+                    <ie:NomFamille>CHAUVEL JOUIN</ie:NomFamille>
+                </t:nom>
+                <t:societe>VILLE DE SAINT NAZAIRE</t:societe>
+                <t:voie>PLACE FRANCOIS BLANCHO</t:voie>
+                <t:codePostal>44600</t:codePostal>
+                <t:commune>SAINT NAZAIRE</t:commune>
+                <t:codePays>FR</t:codePays>
+                <t:fax>0244734357</t:fax>
+                <t:courriel>eclairagepublic@mairie-saintnazaire.fr</t:courriel>
+                <t:telephone>0244734577</t:telephone>
+                <t:telephoneUrgence>0687714884</t:telephoneUrgence>
+                <t:faxUrgence>0244734357</t:faxUrgence>
+                <t:telEndommagement>0244734577</t:telEndommagement>
+                <t:gestionDesFichiersDematerialises>
+                    <t:gereLesFichiersDematerialises>true</t:gereLesFichiersDematerialises>
+                    <t:formatDesFichiersDematerialises>XML_PDF</t:formatDesFichiersDematerialises>
+                </t:gestionDesFichiersDematerialises>
+            </t:contact>
+            <t:categorieOuvrage>S</t:categorieOuvrage>
+            <t:classeOuvrage>LIGNES_ELECTRIQUES_ET_ECLAIRAGE_PUBLIC_HORS_TBT</t:classeOuvrage>
+            <t:positionnementOuvrage>AERIEN_ET_SOUTERRAIN</t:positionnementOuvrage>
+            <t:codeOuvrage>EP1 VSN</t:codeOuvrage>
+            <t:statut>ACTIF</t:statut>
+            <t:dateCreation>2015-02-01+01:00</t:dateCreation>
+        </t:ouvrage>
+    </t:listeDesOuvrages>
+    <t:listeDesREADE/>
+</t:dossierConsultation>

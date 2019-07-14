@@ -1,0 +1,9 @@
+{
+  "main": "kotlin/aipr.js",
+  "devDependencies": {},
+  "dependencies": {
+    "kotlin": "1.3.40"
+  },
+  "name": "aipr",
+  "version": "0.0.0-unspecified"
+}

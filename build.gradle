@@ -5,7 +5,12 @@ buildscript {
 }
 
 plugins {
-    id 'kotlin-multiplatform' version '1.3.40' //1.3.31
+    id 'kotlin-multiplatform' version '1.3.41' //1.3.31
+    id 'application'
+}
+
+application {
+    mainClassName = 'org.gradle.fr.lamacq.Main'
 }
 
 repositories {
@@ -91,14 +96,15 @@ task populateWebFolder(dependsOn: [jsMainClasses]) {
 
 jsJar.dependsOn(populateWebFolder)
 
+/*
 task run(type: JavaExec, dependsOn: [jvmMainClasses, jsJar]) {
-    main = "sample.SampleJvmKt"
+    main = "fr.lamacq.MainKt" //main = "sample.SampleJvmKt"
     classpath { [
             kotlin.targets.jvm.compilations.main.output.allOutputs.files,
             configurations.jvmRuntimeClasspath,
     ] }
     args = []
-}
+} */
 
-task stage(dependsOn: ['build', 'clean'])
+task stage(dependsOn: ['installDist']) //task stage(dependsOn: ['build', 'clean'])
 build.mustRunAfter clean
