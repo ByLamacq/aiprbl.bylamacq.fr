@@ -8,13 +8,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a78b6bf7-df3f-437e-acc9-8ba0dff8eb3b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules/aipr.commonMain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/aipr.commonMain.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/aipr.commonTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/aipr.commonTest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/aipr.jsMain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/aipr.jsMain.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/aipr.jsTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/aipr.jsTest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/aipr.jvmMain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/aipr.jvmMain.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/aipr.jvmTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/aipr.jvmTest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/aipr-test/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/aipr-test/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages/aipr/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages/aipr/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/packages_imported/.visited" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/packages_imported/.visited" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlinJs/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlinJs/build-history.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlinJs/last-build.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlinJs/last-build.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlinJvm/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlinJvm/build-history.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlinJvm/last-build.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlinJvm/last-build.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/kotlin/compileTestKotlinJs/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileTestKotlinJs/build-history.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/kotlin/compileTestKotlinJs/last-build.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileTestKotlinJs/last-build.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/kotlin/compileTestKotlinJvm/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileTestKotlinJvm/build-history.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/kotlin/compileTestKotlinJvm/last-build.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileTestKotlinJvm/last-build.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/aipr-js.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/aipr-js.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/aipr-jvm.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/aipr-jvm.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -51,8 +64,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/build.gradle">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="321">
-                  <caret line="106" column="4" selection-start-line="106" selection-start-column="4" selection-end-line="106" selection-end-column="4" />
+                <state relative-caret-position="351">
+                  <caret line="98" column="2" lean-forward="true" selection-start-line="98" selection-start-column="2" selection-end-line="98" selection-end-column="2" />
                 </state>
               </provider>
             </entry>
@@ -238,9 +251,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="137" />
+    <option name="x" value="292" />
     <option name="y" value="-4" />
-    <option name="width" value="1398" />
+    <option name="width" value="1400" />
     <option name="height" value="1084" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -365,12 +378,17 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.generateSingleFile" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="aipr" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Archives" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../emojiphrases" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.11001098" />
+    <property name="project.structure.side.proportion" value="0.2502781" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -474,13 +492,13 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32960325" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4997236" visible="true" weight="0.45158002" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4997236" weight="0.45158002" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39979655" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32960325" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32925585" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5002764" side_tool="true" weight="0.525941" />
       <window_info anchor="bottom" id="Build" order="10" weight="0.21814474" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32925585" />
@@ -722,13 +740,6 @@
     <entry file="file://$PROJECT_DIR$/gradle.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmMain/kotlin/fr/lamacq/Main.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1845">
-          <caret line="160" column="76" selection-start-line="160" selection-start-column="76" selection-end-line="160" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -802,10 +813,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmMain/kotlin/fr/lamacq/Main.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1845">
+          <caret line="160" column="76" selection-start-line="160" selection-start-column="76" selection-end-line="160" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="106" column="4" selection-start-line="106" selection-start-column="4" selection-end-line="106" selection-end-column="4" />
+        <state relative-caret-position="351">
+          <caret line="98" column="2" lean-forward="true" selection-start-line="98" selection-start-column="2" selection-end-line="98" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -815,12 +833,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>aipr-jvm</last-edited>
+          <last-edited>aipr-js</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.11001098" />
-                <option value="0.5" />
+                <option value="0.2502781" />
+                <option value="0.57121664" />
               </list>
             </option>
           </splitter-proportions>
@@ -832,7 +850,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.11001098" />
+                <option value="0.38042268" />
               </list>
             </option>
           </splitter-proportions>
@@ -843,7 +861,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.2502781" />
               </list>
             </option>
           </splitter-proportions>
@@ -851,10 +869,11 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.2502781" />
               </list>
             </option>
           </splitter-proportions>
@@ -867,7 +886,6 @@
             <option name="proportions">
               <list>
                 <option value="0.11001098" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -875,10 +893,11 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Gradle: ch.qos.logback:logback-classic:1.2.3</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.11001098" />
               </list>
             </option>
           </splitter-proportions>

@@ -1,0 +1,1408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="aipr" default="all">
+  
+  
+  <property file="aipr.properties"/>
+  <!-- Uncomment the following property if no tests compilation is needed -->
+  <!-- 
+  <property name="skip.tests" value="true"/>
+   -->
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="700m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/*.hprof/**"/>
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/*.rbc/**"/>
+    <exclude name="**/*.yarb/**"/>
+    <exclude name="**/*~/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/__pycache__/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/vssver.scc/**"/>
+    <exclude name="**/vssver2.scc/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.war"/>
+    <include name="*.swc"/>
+    <include name="*.zip"/>
+    <include name="*.egg"/>
+    <include name="*.ane"/>
+    <include name="*.jar"/>
+    <include name="*.ear"/>
+    <include name="*.klib"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <exclude name="**/?*.java"/>
+    <exclude name="**/?*.form"/>
+    <exclude name="**/?*.class"/>
+    <exclude name="**/?*.groovy"/>
+    <exclude name="**/?*.scala"/>
+    <exclude name="**/?*.flex"/>
+    <exclude name="**/?*.kt"/>
+    <exclude name="**/?*.clj"/>
+    <exclude name="**/?*.aj"/>
+  </patternset>
+  
+  <!-- JDK definitions -->
+  
+  <property name="jdk.bin.1.8" value="${jdk.home.1.8}/bin"/>
+  <path id="jdk.classpath.1.8">
+    <fileset dir="${jdk.home.1.8}">
+      <include name="jre/lib/charsets.jar"/>
+      <include name="jre/lib/ext/cldrdata.jar"/>
+      <include name="jre/lib/ext/dnsns.jar"/>
+      <include name="jre/lib/ext/icedtea-sound.jar"/>
+      <include name="jre/lib/ext/jaccess.jar"/>
+      <include name="jre/lib/ext/localedata.jar"/>
+      <include name="jre/lib/ext/nashorn.jar"/>
+      <include name="jre/lib/ext/sunec.jar"/>
+      <include name="jre/lib/ext/sunjce_provider.jar"/>
+      <include name="jre/lib/ext/sunpkcs11.jar"/>
+      <include name="jre/lib/ext/zipfs.jar"/>
+      <include name="jre/lib/jce.jar"/>
+      <include name="jre/lib/jsse.jar"/>
+      <include name="jre/lib/management-agent.jar"/>
+      <include name="jre/lib/resources.jar"/>
+      <include name="jre/lib/rt.jar"/>
+    </fileset>
+  </path>
+  
+  <property name="project.jdk.home" value="${jdk.home.1.8}"/>
+  <property name="project.jdk.bin" value="${jdk.bin.1.8}"/>
+  <property name="project.jdk.classpath" value="jdk.classpath.1.8"/>
+  
+  
+  <!-- Project Libraries -->
+  
+  <path id="library.gradle:_ch.qos.logback:logback-classic:1.2.3.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.2.3/7c4f3c474fb2c041d8028740440937705ebb473a/logback-classic-1.2.3.jar"/>
+  </path>
+  
+  <path id="library.gradle:_ch.qos.logback:logback-core:1.2.3.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.2.3/864344400c3d4d92dfeb0a305dc87d953677c03c/logback-core-1.2.3.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.google.code.gson:gson:2.8.5.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.5/f645ed69d595b24d4cf8b3fbb64cc505bede8829/gson-2.8.5.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.sun.mail:javax.mail:1.5.6.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/com.sun.mail/javax.mail/1.5.6/ab5daef2f881c42c8e280cbe918ec4d7fdfd7efe/javax.mail-1.5.6.jar"/>
+  </path>
+  
+  <path id="library.gradle:_com.typesafe:config:1.3.1.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/com.typesafe/config/1.3.1/2cf7a6cc79732e3bdf1647d7404279900ca63eb0/config-1.3.1.jar"/>
+  </path>
+  
+  <path id="library.gradle:_commons-logging:commons-logging:1.2.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar"/>
+  </path>
+  
+  <path id="library.gradle:_io.ktor:ktor-gson:1.2.2.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/io.ktor/ktor-gson/1.2.2/a71b96c714f61ac7def69b2c66137420561f523/ktor-gson-1.2.2.jar"/>
+  </path>
+  
+  <path id="library.gradle:_io.ktor:ktor-html-builder:1.2.2.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/io.ktor/ktor-html-builder/1.2.2/a61c61cf851af8540d152e6715a69ce221b35184/ktor-html-builder-1.2.2.jar"/>
+  </path>
+  
+  <path id="library.gradle:_io.ktor:ktor-http-cio-jvm:1.2.2.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/io.ktor/ktor-http-cio-jvm/1.2.2/22659690f735fa439b4f91b83ef846e3ec7dedf1/ktor-http-cio-jvm-1.2.2.jar"/>
+  </path>
+  
+  <path id="library.gradle:_io.ktor:ktor-http-jvm:1.2.2.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/io.ktor/ktor-http-jvm/1.2.2/1381ef340b58a3287f1da884b9db7280466c67ff/ktor-http-jvm-1.2.2.jar"/>
+  </path>
+  
+  <path id="library.gradle:_io.ktor:ktor-network:1.2.2.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/io.ktor/ktor-network/1.2.2/e8b2d5f46acfc25d7e893dde14f8da41ab28b7fd/ktor-network-1.2.2.jar"/>
+  </path>
+  
+  <path id="library.gradle:_io.ktor:ktor-server-core:1.2.2.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/io.ktor/ktor-server-core/1.2.2/37ba2773c666ff3f9f35a6d5949b8b8c2edd6adf/ktor-server-core-1.2.2.jar"/>
+  </path>
+  
+  <path id="library.gradle:_io.ktor:ktor-server-host-common:1.2.2.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/io.ktor/ktor-server-host-common/1.2.2/80e62a4dab4e116aeb50e8017838b83836764bf9/ktor-server-host-common-1.2.2.jar"/>
+  </path>
+  
+  <path id="library.gradle:_io.ktor:ktor-server-netty:1.2.2.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/io.ktor/ktor-server-netty/1.2.2/86f06a652bf2859236835e802cd81dc884a72c61/ktor-server-netty-1.2.2.jar"/>
+  </path>
+  
+  <path id="library.gradle:_io.ktor:ktor-utils-jvm:1.2.2.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/io.ktor/ktor-utils-jvm/1.2.2/7c51add50945d74c07926e11acd33b66295903c8/ktor-utils-jvm-1.2.2.jar"/>
+  </path>
+  
+  <path id="library.gradle:_io.netty:netty-buffer:4.1.36.final.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/io.netty/netty-buffer/4.1.36.Final/7f2db0921dd57df4db076229830ab09bba713aeb/netty-buffer-4.1.36.Final.jar"/>
+  </path>
+  
+  <path id="library.gradle:_io.netty:netty-codec-http2:4.1.36.final.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http2/4.1.36.Final/ed198d8a5283910b0c062a50dd28ef4688dcb2a5/netty-codec-http2-4.1.36.Final.jar"/>
+  </path>
+  
+  <path id="library.gradle:_io.netty:netty-codec-http:4.1.36.final.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http/4.1.36.Final/62b73d439dbddf3c0dde092b048580139695ab46/netty-codec-http-4.1.36.Final.jar"/>
+  </path>
+  
+  <path id="library.gradle:_io.netty:netty-codec:4.1.36.final.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/io.netty/netty-codec/4.1.36.Final/8462116d327bb3d1ec24258071f2e7345a73dbfc/netty-codec-4.1.36.Final.jar"/>
+  </path>
+  
+  <path id="library.gradle:_io.netty:netty-common:4.1.36.final.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/io.netty/netty-common/4.1.36.Final/f6f38fde652a70ea579897edc80e52353e487ae6/netty-common-4.1.36.Final.jar"/>
+  </path>
+  
+  <path id="library.gradle:_io.netty:netty-handler:4.1.36.final.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/io.netty/netty-handler/4.1.36.Final/1c38a5920a10c01b1cce4cdc964447ec76abf1b5/netty-handler-4.1.36.Final.jar"/>
+  </path>
+  
+  <path id="library.gradle:_io.netty:netty-resolver:4.1.36.final.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/io.netty/netty-resolver/4.1.36.Final/e4d243fbf4e6837fa294f892bf97149e18129100/netty-resolver-4.1.36.Final.jar"/>
+  </path>
+  
+  <path id="library.gradle:_io.netty:netty-transport-native-epoll:4.1.36.final.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-epoll/4.1.36.Final/5eb8b3ad0a99a16e5ae492da27544b1143e00606/netty-transport-native-epoll-4.1.36.Final.jar"/>
+  </path>
+  
+  <path id="library.gradle:_io.netty:netty-transport-native-kqueue:4.1.36.final.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-kqueue/4.1.36.Final/a2c6883a0f2e0adc15e6d764ced0ef044e2311c7/netty-transport-native-kqueue-4.1.36.Final.jar"/>
+  </path>
+  
+  <path id="library.gradle:_io.netty:netty-transport-native-unix-common:4.1.36.final.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-unix-common/4.1.36.Final/d95d7033f400f9472db9da7834c443b96cd4bab0/netty-transport-native-unix-common-4.1.36.Final.jar"/>
+  </path>
+  
+  <path id="library.gradle:_io.netty:netty-transport:4.1.36.final.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/io.netty/netty-transport/4.1.36.Final/8546e6be47be587acab86bbd106ca023678f07d9/netty-transport-4.1.36.Final.jar"/>
+  </path>
+  
+  <path id="library.gradle:_javax.activation:activation:1.1.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/javax.activation/activation/1.1/e6cb541461c2834bdea3eb920f1884d1eb508b50/activation-1.1.jar"/>
+  </path>
+  
+  <path id="library.gradle:_junit:junit:4.12.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/junit/junit/4.12/2973d150c0dc1fefe998f834810d68f278ea58ec/junit-4.12.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.apache.commons:commons-email:1.5.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-email/1.5/e8e677c6362eba14ff3c476ba63ccb83132dbd52/commons-email-1.5.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.apache.pdfbox:fontbox:2.0.13.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.apache.pdfbox/fontbox/2.0.13/a1361adacfe9bebf262a5e05a97f1add9af1cc05/fontbox-2.0.13.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.apache.pdfbox:pdfbox:2.0.13.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.apache.pdfbox/pdfbox/2.0.13/389abca354e682d65e500c57856b75130d015e77/pdfbox-2.0.13.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.eclipse.jetty.alpn:alpn-api:1.1.3.v20160715.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.alpn/alpn-api/1.1.3.v20160715/a1bf3a937f91b4c953acd13e8c9552347adc2198/alpn-api-1.1.3.v20160715.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.hamcrest:hamcrest-core:1.3.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.jetbrains.kotlin:kotlin-reflect:1.3.40.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.3.40/f2f8357e000fd80d8d799110f012b86fd4637386/kotlin-reflect-1.3.40.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.41.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.41/2ecf4aa059427d7186312fd1736afedf7972e7f7/kotlin-stdlib-common-1.3.41.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.41.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.3.41/a1f331124ba069a09e964ad2640c36f140f2c758/kotlin-stdlib-jdk7-1.3.41.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.41.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.3.41/77652607ed82a49202d8a0b89de16994b61bdd75/kotlin-stdlib-jdk8-1.3.41.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-js:1.3.41.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-js/1.3.41/55b92e441b0ea9cbf079c6452b41687f95571524/kotlin-stdlib-js-1.3.41.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib:1.3.41.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.41/e24bd38de28a326cce8b1f0d61e809e9a92dad6a/kotlin-stdlib-1.3.41.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.jetbrains.kotlin:kotlin-test-annotations-common:1.3.41.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-annotations-common/1.3.41/f57e03dea3d1a81b5e1b3cdcf4eb2710a3fac173/kotlin-test-annotations-common-1.3.41.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.jetbrains.kotlin:kotlin-test-common:1.3.41.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-common/1.3.41/744000c1a0ef654706ce3367a10543590dab9246/kotlin-test-common-1.3.41.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.jetbrains.kotlin:kotlin-test-js:1.3.41.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-js/1.3.41/3e2fbf8ac392c8ec6da16cd1436378fdfd97230f/kotlin-test-js-1.3.41.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.jetbrains.kotlin:kotlin-test-junit:1.3.41.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-junit/1.3.41/2ec43deb5225811cb0fd63385b7f9382a78cd225/kotlin-test-junit-1.3.41.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.jetbrains.kotlin:kotlin-test:1.3.41.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test/1.3.41/98efd6e69ef6f877b086dfd7894a4c36fe5d5736/kotlin-test-1.3.41.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.jetbrains.kotlinx:atomicfu-common:0.12.9.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/atomicfu-common/0.12.9/ba80bc10a440ea504b5cebd262becf9870e309c3/atomicfu-common-0.12.9.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.jetbrains.kotlinx:atomicfu:0.12.9.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/atomicfu/0.12.9/5cee16643956d76c52c7ef345448b0990b6e1e04/atomicfu-0.12.9.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core-common:1.2.2.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-common/1.2.2/8b54928fbb813408684911eb27d6afeb23c92a4b/kotlinx-coroutines-core-common-1.2.2.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.2.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core/1.2.2/6ff48bdfc38a8c22e3fc37605b6a6afaed3b6dbd/kotlinx-coroutines-core-1.2.2.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-io-jvm:0.1.10.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-io-jvm/0.1.10/ec98e487d8c710126001c4f3086e4a0b9c0d3179/kotlinx-coroutines-io-jvm-0.1.10.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-io:0.1.10.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-io/0.1.10/798b764e7f9396e63eb263a83c0385686d69f3e0/kotlinx-coroutines-io-0.1.10.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.2.2.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-jdk8/1.2.2/71653b85af2fe6baeb5314c2863dffe7aac8068a/kotlinx-coroutines-jdk8-1.2.2.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.jetbrains.kotlinx:kotlinx-html-jvm:0.6.12.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-html-jvm/0.6.12/95dfe9d85947c8dd57c16dced385a37280166e56/kotlinx-html-jvm-0.6.12.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.jetbrains.kotlinx:kotlinx-io-jvm:0.1.10.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-io-jvm/0.1.10/74f179ae134d78ad360770801807c7078e71885/kotlinx-io-jvm-0.1.10.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.jetbrains.kotlinx:kotlinx-io:0.1.10.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-io/0.1.10/c407b4bf931379824cf002f110df028cfe18c87c/kotlinx-io-0.1.10.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.jetbrains:annotations:13.0.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.slf4j:slf4j-api:1.7.25.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.25/da76ca59f6a57ee3102f8f9bd9cee742973efa8a/slf4j-api-1.7.25.jar"/>
+  </path>
+  <!-- Register Custom Compiler Taskdefs -->
+  <property name="javac2.home" value="${idea.home}/lib"/>
+  <path id="javac2.classpath">
+    <fileset dir="${javac2.home}">
+      <include name="javac2.jar"/>
+      <include name="jdom.jar"/>
+      <include name="asm-all*.jar"/>
+      <include name="forms-*.jar"/>
+    </fileset>
+  </path>
+  <target name="register.custom.compilers">
+    <taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="javac2.classpath"/>
+    <taskdef name="instrumentIdeaExtensions" classname="com.intellij.ant.InstrumentIdeaExtensions" classpathref="javac2.classpath"/>
+  </target>
+  
+  <!-- Modules -->
+  
+  
+  <!-- Module aipr -->
+  
+  <dirname property="module.aipr.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.aipr" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.aipr" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.aipr" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.aipr" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="aipr.output.dir" value="${module.aipr.basedir}/out/production/aipr"/>
+  <property name="aipr.testoutput.dir" value="${module.aipr.basedir}/out/test/aipr"/>
+  
+  <path id="aipr.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="aipr.module.production.classpath">
+    <path refid="${module.jdk.classpath.aipr}"/>
+  </path>
+  
+  <path id="aipr.runtime.production.module.classpath">
+    <pathelement location="${aipr.output.dir}"/>
+  </path>
+  
+  <path id="aipr.module.classpath">
+    <path refid="${module.jdk.classpath.aipr}"/>
+    <pathelement location="${aipr.output.dir}"/>
+  </path>
+  
+  <path id="aipr.runtime.module.classpath">
+    <pathelement location="${aipr.testoutput.dir}"/>
+    <pathelement location="${aipr.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.aipr">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.aipr">
+    <patternset refid="excluded.from.module.aipr"/>
+  </patternset>
+  
+  
+  <target name="compile.module.aipr" depends="compile.module.aipr.production,compile.module.aipr.tests" description="Compile module aipr"/>
+  
+  <target name="compile.module.aipr.production" depends="register.custom.compilers" description="Compile module aipr; production classes"/>
+  
+  <target name="compile.module.aipr.tests" depends="register.custom.compilers,compile.module.aipr.production" description="compile module aipr; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.aipr" description="cleanup module">
+    <delete dir="${aipr.output.dir}"/>
+    <delete dir="${aipr.testoutput.dir}"/>
+  </target>
+  
+  
+  <!-- Module aipr.commonMain -->
+  
+  <dirname property="module.aipr.commonmain.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.aipr.commonmain" value="${jdk.home.kotlin_sdk}"/>
+  <property name="module.jdk.bin.aipr.commonmain" value="${jdk.bin.kotlin_sdk}"/>
+  <property name="module.jdk.classpath.aipr.commonmain" value="jdk.classpath.kotlin_sdk"/>
+  
+  <property name="compiler.args.aipr.commonmain" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="aipr.commonmain.output.dir" value="${module.aipr.commonmain.basedir}/out/production/aipr.commonMain"/>
+  <property name="aipr.commonmain.testoutput.dir" value="${module.aipr.commonmain.basedir}/out/test/aipr.commonMain"/>
+  
+  <path id="aipr.commonmain.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="aipr.commonmain.module.production.classpath">
+    <path refid="${module.jdk.classpath.aipr.commonmain}"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.41.classpath"/>
+  </path>
+  
+  <path id="aipr.commonmain.runtime.production.module.classpath">
+    <pathelement location="${aipr.commonmain.output.dir}"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.41.classpath"/>
+  </path>
+  
+  <path id="aipr.commonmain.module.classpath">
+    <path refid="${module.jdk.classpath.aipr.commonmain}"/>
+    <pathelement location="${aipr.commonmain.output.dir}"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.41.classpath"/>
+  </path>
+  
+  <path id="aipr.commonmain.runtime.module.classpath">
+    <pathelement location="${aipr.commonmain.testoutput.dir}"/>
+    <pathelement location="${aipr.commonmain.output.dir}"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.41.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.aipr.commonmain">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.aipr.commonmain">
+    <patternset refid="excluded.from.module.aipr.commonmain"/>
+  </patternset>
+  
+  <path id="aipr.commonmain.module.sourcepath">
+    <dirset dir="${module.aipr.commonmain.basedir}/src/commonMain">
+      <include name="kotlin"/>
+      <include name="resources"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.aipr.commonmain" depends="compile.module.aipr.commonmain.production,compile.module.aipr.commonmain.tests" description="Compile module aipr.commonMain"/>
+  
+  <target name="compile.module.aipr.commonmain.production" depends="register.custom.compilers" description="Compile module aipr.commonMain; production classes">
+    <mkdir dir="${aipr.commonmain.output.dir}"/>
+    <javac2 destdir="${aipr.commonmain.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.aipr.commonmain}/javac">
+      <compilerarg line="${compiler.args.aipr.commonmain}"/>
+      <bootclasspath refid="aipr.commonmain.module.bootclasspath"/>
+      <classpath refid="aipr.commonmain.module.production.classpath"/>
+      <src refid="aipr.commonmain.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.aipr.commonmain"/>
+    </javac2>
+    
+    <copy todir="${aipr.commonmain.output.dir}">
+      <fileset dir="${module.aipr.commonmain.basedir}/src/commonMain/kotlin">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.aipr.commonmain.basedir}/src/commonMain/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.aipr.commonmain.tests" depends="register.custom.compilers,compile.module.aipr.commonmain.production" description="compile module aipr.commonMain; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.aipr.commonmain" description="cleanup module">
+    <delete dir="${aipr.commonmain.output.dir}"/>
+    <delete dir="${aipr.commonmain.testoutput.dir}"/>
+  </target>
+  
+  
+  <!-- Module aipr.main -->
+  
+  <dirname property="module.aipr.main.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.aipr.main" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.aipr.main" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.aipr.main" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.aipr.main" value="-encoding UTF-8 -source 8 -target 1.8 ${compiler.args}"/>
+  
+  <property name="aipr.main.output.dir" value="${module.aipr.main.basedir}/out/production/aipr.main"/>
+  <property name="aipr.main.testoutput.dir" value="${module.aipr.main.basedir}/out/test/aipr.main"/>
+  
+  <path id="aipr.main.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="aipr.main.module.production.classpath">
+    <path refid="${module.jdk.classpath.aipr.main}"/>
+  </path>
+  
+  <path id="aipr.main.runtime.production.module.classpath">
+    <pathelement location="${aipr.main.output.dir}"/>
+  </path>
+  
+  <path id="aipr.main.module.classpath">
+    <path refid="${module.jdk.classpath.aipr.main}"/>
+    <pathelement location="${aipr.main.output.dir}"/>
+  </path>
+  
+  <path id="aipr.main.runtime.module.classpath">
+    <pathelement location="${aipr.main.testoutput.dir}"/>
+    <pathelement location="${aipr.main.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.aipr.main">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.aipr.main">
+    <patternset refid="excluded.from.module.aipr.main"/>
+  </patternset>
+  
+  
+  <target name="compile.module.aipr.main" depends="compile.module.aipr.main.production,compile.module.aipr.main.tests" description="Compile module aipr.main"/>
+  
+  <target name="compile.module.aipr.main.production" depends="register.custom.compilers" description="Compile module aipr.main; production classes"/>
+  
+  <target name="compile.module.aipr.main.tests" depends="register.custom.compilers,compile.module.aipr.main.production" description="compile module aipr.main; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.aipr.main" description="cleanup module">
+    <delete dir="${aipr.main.output.dir}"/>
+    <delete dir="${aipr.main.testoutput.dir}"/>
+  </target>
+  
+  
+  <!-- Module aipr.test -->
+  
+  <dirname property="module.aipr.test.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.aipr.test" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.aipr.test" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.aipr.test" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.aipr.test" value="-encoding UTF-8 -source 8 -target 1.8 ${compiler.args}"/>
+  
+  <property name="aipr.test.output.dir" value="${module.aipr.test.basedir}/out/production/aipr.test"/>
+  <property name="aipr.test.testoutput.dir" value="${module.aipr.test.basedir}/out/test/aipr.test"/>
+  
+  <path id="aipr.test.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="aipr.test.module.production.classpath">
+    <path refid="${module.jdk.classpath.aipr.test}"/>
+  </path>
+  
+  <path id="aipr.test.runtime.production.module.classpath">
+    <pathelement location="${aipr.test.output.dir}"/>
+  </path>
+  
+  <path id="aipr.test.module.classpath">
+    <path refid="${module.jdk.classpath.aipr.test}"/>
+    <pathelement location="${aipr.test.output.dir}"/>
+  </path>
+  
+  <path id="aipr.test.runtime.module.classpath">
+    <pathelement location="${aipr.test.testoutput.dir}"/>
+    <pathelement location="${aipr.test.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.aipr.test">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.aipr.test">
+    <patternset refid="excluded.from.module.aipr.test"/>
+  </patternset>
+  
+  
+  <target name="compile.module.aipr.test" depends="compile.module.aipr.test.production,compile.module.aipr.test.tests" description="Compile module aipr.test"/>
+  
+  <target name="compile.module.aipr.test.production" depends="register.custom.compilers" description="Compile module aipr.test; production classes"/>
+  
+  <target name="compile.module.aipr.test.tests" depends="register.custom.compilers,compile.module.aipr.test.production" description="compile module aipr.test; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.aipr.test" description="cleanup module">
+    <delete dir="${aipr.test.output.dir}"/>
+    <delete dir="${aipr.test.testoutput.dir}"/>
+  </target>
+  
+  
+  <!-- Module aipr.commonTest -->
+  
+  <dirname property="module.aipr.commontest.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.aipr.commontest" value="${jdk.home.kotlin_sdk}"/>
+  <property name="module.jdk.bin.aipr.commontest" value="${jdk.bin.kotlin_sdk}"/>
+  <property name="module.jdk.classpath.aipr.commontest" value="jdk.classpath.kotlin_sdk"/>
+  
+  <property name="compiler.args.aipr.commontest" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="aipr.commontest.output.dir" value="${module.aipr.commontest.basedir}/out/production/aipr.commonTest"/>
+  <property name="aipr.commontest.testoutput.dir" value="${module.aipr.commontest.basedir}/out/test/aipr.commonTest"/>
+  
+  <path id="aipr.commontest.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="aipr.commontest.module.production.classpath">
+    <path refid="${module.jdk.classpath.aipr.commontest}"/>
+  </path>
+  
+  <path id="aipr.commontest.runtime.production.module.classpath">
+    <pathelement location="${aipr.commontest.output.dir}"/>
+  </path>
+  
+  <path id="aipr.commontest.module.classpath">
+    <path refid="${module.jdk.classpath.aipr.commontest}"/>
+    <pathelement location="${aipr.commontest.output.dir}"/>
+    <pathelement location="${aipr.commonmain.testoutput.dir}"/>
+    <pathelement location="${aipr.commonmain.output.dir}"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-annotations-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-common:1.3.41.classpath"/>
+  </path>
+  
+  <path id="aipr.commontest.runtime.module.classpath">
+    <pathelement location="${aipr.commontest.testoutput.dir}"/>
+    <pathelement location="${aipr.commontest.output.dir}"/>
+    <path refid="aipr.commonmain.runtime.module.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-annotations-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-common:1.3.41.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.aipr.commontest">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.aipr.commontest">
+    <patternset refid="excluded.from.module.aipr.commontest"/>
+  </patternset>
+  
+  <path id="aipr.commontest.module.test.sourcepath">
+    <dirset dir="${module.aipr.commontest.basedir}/src/commonTest">
+      <include name="kotlin"/>
+      <include name="resources"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.aipr.commontest" depends="compile.module.aipr.commontest.production,compile.module.aipr.commontest.tests" description="Compile module aipr.commonTest"/>
+  
+  <target name="compile.module.aipr.commontest.production" depends="register.custom.compilers,compile.module.aipr.commonmain" description="Compile module aipr.commonTest; production classes"/>
+  
+  <target name="compile.module.aipr.commontest.tests" depends="register.custom.compilers,compile.module.aipr.commontest.production" description="compile module aipr.commonTest; test classes" unless="skip.tests">
+    <mkdir dir="${aipr.commontest.testoutput.dir}"/>
+    <javac2 destdir="${aipr.commontest.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.aipr.commontest}/javac">
+      <compilerarg line="${compiler.args.aipr.commontest}"/>
+      <bootclasspath refid="aipr.commontest.module.bootclasspath"/>
+      <classpath refid="aipr.commontest.module.classpath"/>
+      <src refid="aipr.commontest.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.aipr.commontest"/>
+    </javac2>
+    
+    <copy todir="${aipr.commontest.testoutput.dir}">
+      <fileset dir="${module.aipr.commontest.basedir}/src/commonTest/kotlin">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.aipr.commontest.basedir}/src/commonTest/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.aipr.commontest" description="cleanup module">
+    <delete dir="${aipr.commontest.output.dir}"/>
+    <delete dir="${aipr.commontest.testoutput.dir}"/>
+  </target>
+  
+  
+  <!-- Module aipr.jsMain -->
+  
+  <dirname property="module.aipr.jsmain.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.aipr.jsmain" value="${jdk.home.kotlin_sdk}"/>
+  <property name="module.jdk.bin.aipr.jsmain" value="${jdk.bin.kotlin_sdk}"/>
+  <property name="module.jdk.classpath.aipr.jsmain" value="jdk.classpath.kotlin_sdk"/>
+  
+  <property name="compiler.args.aipr.jsmain" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="aipr.jsmain.output.dir" value="${module.aipr.jsmain.basedir}/build/classes/kotlin/js/main"/>
+  <property name="aipr.jsmain.testoutput.dir" value="${module.aipr.jsmain.basedir}/build/classes/kotlin/js/main"/>
+  
+  <path id="aipr.jsmain.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="aipr.jsmain.module.production.classpath">
+    <path refid="${module.jdk.classpath.aipr.jsmain}"/>
+    <pathelement location="${aipr.commonmain.output.dir}"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-js:1.3.41.classpath"/>
+  </path>
+  
+  <path id="aipr.jsmain.runtime.production.module.classpath">
+    <pathelement location="${aipr.jsmain.output.dir}"/>
+    <path refid="aipr.commonmain.runtime.production.module.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-js:1.3.41.classpath"/>
+  </path>
+  
+  <path id="aipr.jsmain.module.classpath">
+    <path refid="${module.jdk.classpath.aipr.jsmain}"/>
+    <pathelement location="${aipr.jsmain.output.dir}"/>
+    <pathelement location="${aipr.commonmain.testoutput.dir}"/>
+    <pathelement location="${aipr.commonmain.output.dir}"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-js:1.3.41.classpath"/>
+  </path>
+  
+  <path id="aipr.jsmain.runtime.module.classpath">
+    <pathelement location="${aipr.jsmain.output.dir}"/>
+    <path refid="aipr.commonmain.runtime.module.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-js:1.3.41.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.aipr.jsmain">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.aipr.jsmain">
+    <patternset refid="excluded.from.module.aipr.jsmain"/>
+  </patternset>
+  
+  <path id="aipr.jsmain.module.sourcepath">
+    <dirset dir="${module.aipr.jsmain.basedir}/src/jsMain">
+      <include name="kotlin"/>
+      <include name="resources"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.aipr.jsmain" depends="compile.module.aipr.jsmain.production,compile.module.aipr.jsmain.tests" description="Compile module aipr.jsMain"/>
+  
+  <target name="compile.module.aipr.jsmain.production" depends="register.custom.compilers,compile.module.aipr.commonmain" description="Compile module aipr.jsMain; production classes">
+    <mkdir dir="${aipr.jsmain.output.dir}"/>
+    <javac2 destdir="${aipr.jsmain.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.aipr.jsmain}/javac">
+      <compilerarg line="${compiler.args.aipr.jsmain}"/>
+      <bootclasspath refid="aipr.jsmain.module.bootclasspath"/>
+      <classpath refid="aipr.jsmain.module.production.classpath"/>
+      <src refid="aipr.jsmain.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.aipr.jsmain"/>
+    </javac2>
+    
+    <copy todir="${aipr.jsmain.output.dir}">
+      <fileset dir="${module.aipr.jsmain.basedir}/src/jsMain/kotlin">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.aipr.jsmain.basedir}/src/jsMain/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.aipr.jsmain.tests" depends="register.custom.compilers,compile.module.aipr.jsmain.production" description="compile module aipr.jsMain; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.aipr.jsmain" description="cleanup module">
+    <delete dir="${aipr.jsmain.output.dir}"/>
+    <delete dir="${aipr.jsmain.testoutput.dir}"/>
+  </target>
+  
+  
+  <!-- Module aipr.jvmMain -->
+  
+  <dirname property="module.aipr.jvmmain.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.aipr.jvmmain" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.aipr.jvmmain" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.aipr.jvmmain" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.aipr.jvmmain" value="-encoding UTF-8 -source 8 -target 1.6 ${compiler.args}"/>
+  
+  <property name="aipr.jvmmain.output.dir" value="${module.aipr.jvmmain.basedir}/build/classes/kotlin/jvm/main"/>
+  <property name="aipr.jvmmain.testoutput.dir" value="${module.aipr.jvmmain.basedir}/build/classes/kotlin/jvm/main"/>
+  
+  <path id="aipr.jvmmain.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="aipr.jvmmain.module.production.classpath">
+    <path refid="${module.jdk.classpath.aipr.jvmmain}"/>
+    <pathelement location="${aipr.commonmain.output.dir}"/>
+    <path refid="library.gradle:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.gradle:_org.apache.pdfbox:fontbox:2.0.13.classpath"/>
+    <path refid="library.gradle:_org.apache.pdfbox:pdfbox:2.0.13.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-resolver:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-network:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-reflect:1.3.40.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-http-jvm:1.2.2.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-utils-jvm:1.2.2.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-unix-common:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec-http:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-handler:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-buffer:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-common:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-http-cio-jvm:1.2.2.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-core:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-io:0.1.10.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core-common:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-io:0.1.10.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:atomicfu-common:0.12.9.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.2.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-epoll:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-kqueue:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec-http2:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-host-common:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-io-jvm:0.1.10.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-io-jvm:0.1.10.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:atomicfu:0.12.9.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-html-builder:1.2.2.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-netty:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:annotations:13.0.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-core:1.2.3.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-html-jvm:0.6.12.classpath"/>
+    <path refid="library.gradle:_org.eclipse.jetty.alpn:alpn-api:1.1.3.v20160715.classpath"/>
+    <path refid="library.gradle:_com.typesafe:config:1.3.1.classpath"/>
+    <path refid="library.gradle:_org.slf4j:slf4j-api:1.7.25.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-classic:1.2.3.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-gson:1.2.2.classpath"/>
+    <path refid="library.gradle:_com.google.code.gson:gson:2.8.5.classpath"/>
+    <path refid="library.gradle:_org.apache.commons:commons-email:1.5.classpath"/>
+    <path refid="library.gradle:_com.sun.mail:javax.mail:1.5.6.classpath"/>
+    <path refid="library.gradle:_javax.activation:activation:1.1.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.41.classpath"/>
+  </path>
+  
+  <path id="aipr.jvmmain.runtime.production.module.classpath">
+    <pathelement location="${aipr.jvmmain.output.dir}"/>
+    <path refid="aipr.commonmain.runtime.production.module.classpath"/>
+    <path refid="library.gradle:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.gradle:_org.apache.pdfbox:fontbox:2.0.13.classpath"/>
+    <path refid="library.gradle:_org.apache.pdfbox:pdfbox:2.0.13.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-resolver:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-network:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-reflect:1.3.40.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-http-jvm:1.2.2.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-utils-jvm:1.2.2.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-unix-common:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec-http:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-handler:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-buffer:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-common:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-http-cio-jvm:1.2.2.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-core:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-io:0.1.10.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core-common:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-io:0.1.10.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:atomicfu-common:0.12.9.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.2.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-epoll:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-kqueue:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec-http2:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-host-common:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-io-jvm:0.1.10.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-io-jvm:0.1.10.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:atomicfu:0.12.9.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-html-builder:1.2.2.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-netty:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:annotations:13.0.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-core:1.2.3.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-html-jvm:0.6.12.classpath"/>
+    <path refid="library.gradle:_org.eclipse.jetty.alpn:alpn-api:1.1.3.v20160715.classpath"/>
+    <path refid="library.gradle:_com.typesafe:config:1.3.1.classpath"/>
+    <path refid="library.gradle:_org.slf4j:slf4j-api:1.7.25.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-classic:1.2.3.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-gson:1.2.2.classpath"/>
+    <path refid="library.gradle:_com.google.code.gson:gson:2.8.5.classpath"/>
+    <path refid="library.gradle:_org.apache.commons:commons-email:1.5.classpath"/>
+    <path refid="library.gradle:_com.sun.mail:javax.mail:1.5.6.classpath"/>
+    <path refid="library.gradle:_javax.activation:activation:1.1.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.41.classpath"/>
+  </path>
+  
+  <path id="aipr.jvmmain.module.classpath">
+    <path refid="${module.jdk.classpath.aipr.jvmmain}"/>
+    <pathelement location="${aipr.jvmmain.output.dir}"/>
+    <pathelement location="${aipr.commonmain.testoutput.dir}"/>
+    <pathelement location="${aipr.commonmain.output.dir}"/>
+    <path refid="library.gradle:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.gradle:_org.apache.pdfbox:fontbox:2.0.13.classpath"/>
+    <path refid="library.gradle:_org.apache.pdfbox:pdfbox:2.0.13.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-resolver:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-network:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-reflect:1.3.40.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-http-jvm:1.2.2.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-utils-jvm:1.2.2.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-unix-common:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec-http:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-handler:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-buffer:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-common:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-http-cio-jvm:1.2.2.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-core:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-io:0.1.10.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core-common:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-io:0.1.10.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:atomicfu-common:0.12.9.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.2.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-epoll:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-kqueue:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec-http2:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-host-common:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-io-jvm:0.1.10.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-io-jvm:0.1.10.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:atomicfu:0.12.9.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-html-builder:1.2.2.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-netty:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:annotations:13.0.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-core:1.2.3.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-html-jvm:0.6.12.classpath"/>
+    <path refid="library.gradle:_org.eclipse.jetty.alpn:alpn-api:1.1.3.v20160715.classpath"/>
+    <path refid="library.gradle:_com.typesafe:config:1.3.1.classpath"/>
+    <path refid="library.gradle:_org.slf4j:slf4j-api:1.7.25.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-classic:1.2.3.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-gson:1.2.2.classpath"/>
+    <path refid="library.gradle:_com.google.code.gson:gson:2.8.5.classpath"/>
+    <path refid="library.gradle:_org.apache.commons:commons-email:1.5.classpath"/>
+    <path refid="library.gradle:_com.sun.mail:javax.mail:1.5.6.classpath"/>
+    <path refid="library.gradle:_javax.activation:activation:1.1.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.41.classpath"/>
+  </path>
+  
+  <path id="aipr.jvmmain.runtime.module.classpath">
+    <pathelement location="${aipr.jvmmain.output.dir}"/>
+    <path refid="aipr.commonmain.runtime.module.classpath"/>
+    <path refid="library.gradle:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.gradle:_org.apache.pdfbox:fontbox:2.0.13.classpath"/>
+    <path refid="library.gradle:_org.apache.pdfbox:pdfbox:2.0.13.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-resolver:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-network:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-reflect:1.3.40.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-http-jvm:1.2.2.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-utils-jvm:1.2.2.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-unix-common:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec-http:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-handler:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-buffer:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-common:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-http-cio-jvm:1.2.2.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-core:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-io:0.1.10.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core-common:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-io:0.1.10.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:atomicfu-common:0.12.9.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.2.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-epoll:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-kqueue:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec-http2:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-host-common:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-io-jvm:0.1.10.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-io-jvm:0.1.10.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:atomicfu:0.12.9.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-html-builder:1.2.2.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-netty:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:annotations:13.0.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-core:1.2.3.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-html-jvm:0.6.12.classpath"/>
+    <path refid="library.gradle:_org.eclipse.jetty.alpn:alpn-api:1.1.3.v20160715.classpath"/>
+    <path refid="library.gradle:_com.typesafe:config:1.3.1.classpath"/>
+    <path refid="library.gradle:_org.slf4j:slf4j-api:1.7.25.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-classic:1.2.3.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-gson:1.2.2.classpath"/>
+    <path refid="library.gradle:_com.google.code.gson:gson:2.8.5.classpath"/>
+    <path refid="library.gradle:_org.apache.commons:commons-email:1.5.classpath"/>
+    <path refid="library.gradle:_com.sun.mail:javax.mail:1.5.6.classpath"/>
+    <path refid="library.gradle:_javax.activation:activation:1.1.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.41.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.aipr.jvmmain">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.aipr.jvmmain">
+    <patternset refid="excluded.from.module.aipr.jvmmain"/>
+  </patternset>
+  
+  <path id="aipr.jvmmain.module.sourcepath">
+    <dirset dir="${module.aipr.jvmmain.basedir}/src/jvmMain">
+      <include name="kotlin"/>
+      <include name="resources"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.aipr.jvmmain" depends="compile.module.aipr.jvmmain.production,compile.module.aipr.jvmmain.tests" description="Compile module aipr.jvmMain"/>
+  
+  <target name="compile.module.aipr.jvmmain.production" depends="register.custom.compilers,compile.module.aipr.commonmain" description="Compile module aipr.jvmMain; production classes">
+    <mkdir dir="${aipr.jvmmain.output.dir}"/>
+    <javac2 destdir="${aipr.jvmmain.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.aipr.jvmmain}/javac">
+      <compilerarg line="${compiler.args.aipr.jvmmain}"/>
+      <bootclasspath refid="aipr.jvmmain.module.bootclasspath"/>
+      <classpath refid="aipr.jvmmain.module.production.classpath"/>
+      <src refid="aipr.jvmmain.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.aipr.jvmmain"/>
+    </javac2>
+    
+    <copy todir="${aipr.jvmmain.output.dir}">
+      <fileset dir="${module.aipr.jvmmain.basedir}/src/jvmMain/kotlin">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.aipr.jvmmain.basedir}/src/jvmMain/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.aipr.jvmmain.tests" depends="register.custom.compilers,compile.module.aipr.jvmmain.production" description="compile module aipr.jvmMain; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.aipr.jvmmain" description="cleanup module">
+    <delete dir="${aipr.jvmmain.output.dir}"/>
+    <delete dir="${aipr.jvmmain.testoutput.dir}"/>
+  </target>
+  
+  
+  <!-- Module aipr.jsTest -->
+  
+  <dirname property="module.aipr.jstest.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.aipr.jstest" value="${jdk.home.kotlin_sdk}"/>
+  <property name="module.jdk.bin.aipr.jstest" value="${jdk.bin.kotlin_sdk}"/>
+  <property name="module.jdk.classpath.aipr.jstest" value="jdk.classpath.kotlin_sdk"/>
+  
+  <property name="compiler.args.aipr.jstest" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="aipr.jstest.output.dir" value="undefined"/>
+  <property name="aipr.jstest.testoutput.dir" value="${module.aipr.jstest.basedir}/build/classes/kotlin/js/test"/>
+  
+  <path id="aipr.jstest.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="aipr.jstest.module.production.classpath">
+    <path refid="${module.jdk.classpath.aipr.jstest}"/>
+  </path>
+  
+  <path id="aipr.jstest.runtime.production.module.classpath"/>
+  
+  <path id="aipr.jstest.module.classpath">
+    <path refid="${module.jdk.classpath.aipr.jstest}"/>
+    <pathelement location="${aipr.commonmain.testoutput.dir}"/>
+    <pathelement location="${aipr.commonmain.output.dir}"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-js:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-js:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-annotations-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.41.classpath"/>
+    <pathelement location="${aipr.jsmain.output.dir}"/>
+    <pathelement location="${aipr.commontest.testoutput.dir}"/>
+    <pathelement location="${aipr.commontest.output.dir}"/>
+  </path>
+  
+  <path id="aipr.jstest.runtime.module.classpath">
+    <pathelement location="${aipr.jstest.testoutput.dir}"/>
+    <path refid="aipr.commonmain.runtime.module.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-js:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-js:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-annotations-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.41.classpath"/>
+    <path refid="aipr.jsmain.runtime.module.classpath"/>
+    <path refid="aipr.commontest.runtime.module.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.aipr.jstest">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.aipr.jstest">
+    <patternset refid="excluded.from.module.aipr.jstest"/>
+  </patternset>
+  
+  <path id="aipr.jstest.module.test.sourcepath">
+    <dirset dir="${module.aipr.jstest.basedir}/src/jsTest">
+      <include name="kotlin"/>
+      <include name="resources"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.aipr.jstest" depends="compile.module.aipr.jstest.production,compile.module.aipr.jstest.tests" description="Compile module aipr.jsTest"/>
+  
+  <target name="compile.module.aipr.jstest.production" depends="register.custom.compilers,compile.module.aipr.commonmain,compile.module.aipr.jsmain,compile.module.aipr.commontest" description="Compile module aipr.jsTest; production classes"/>
+  
+  <target name="compile.module.aipr.jstest.tests" depends="register.custom.compilers,compile.module.aipr.jstest.production" description="compile module aipr.jsTest; test classes" unless="skip.tests">
+    <mkdir dir="${aipr.jstest.testoutput.dir}"/>
+    <javac2 destdir="${aipr.jstest.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.aipr.jstest}/javac">
+      <compilerarg line="${compiler.args.aipr.jstest}"/>
+      <bootclasspath refid="aipr.jstest.module.bootclasspath"/>
+      <classpath refid="aipr.jstest.module.classpath"/>
+      <src refid="aipr.jstest.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.aipr.jstest"/>
+    </javac2>
+    
+    <copy todir="${aipr.jstest.testoutput.dir}">
+      <fileset dir="${module.aipr.jstest.basedir}/src/jsTest/kotlin">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.aipr.jstest.basedir}/src/jsTest/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.aipr.jstest" description="cleanup module">
+    <delete dir="${aipr.jstest.output.dir}"/>
+    <delete dir="${aipr.jstest.testoutput.dir}"/>
+  </target>
+  
+  
+  <!-- Module aipr.jvmTest -->
+  
+  <dirname property="module.aipr.jvmtest.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.aipr.jvmtest" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.aipr.jvmtest" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.aipr.jvmtest" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.aipr.jvmtest" value="-encoding UTF-8 -source 8 -target 1.6 ${compiler.args}"/>
+  
+  <property name="aipr.jvmtest.output.dir" value="undefined"/>
+  <property name="aipr.jvmtest.testoutput.dir" value="${module.aipr.jvmtest.basedir}/build/classes/kotlin/jvm/test"/>
+  
+  <path id="aipr.jvmtest.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="aipr.jvmtest.module.production.classpath">
+    <path refid="${module.jdk.classpath.aipr.jvmtest}"/>
+  </path>
+  
+  <path id="aipr.jvmtest.runtime.production.module.classpath"/>
+  
+  <path id="aipr.jvmtest.module.classpath">
+    <path refid="${module.jdk.classpath.aipr.jvmtest}"/>
+    <pathelement location="${aipr.commonmain.testoutput.dir}"/>
+    <pathelement location="${aipr.commonmain.output.dir}"/>
+    <path refid="library.gradle:_io.netty:netty-resolver:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-network:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-reflect:1.3.40.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-http-jvm:1.2.2.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-utils-jvm:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+    <path refid="library.gradle:_javax.activation:activation:1.1.classpath"/>
+    <path refid="library.gradle:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-unix-common:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec-http:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-handler:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-buffer:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-common:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-http-cio-jvm:1.2.2.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-core:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-io:0.1.10.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core-common:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-io:0.1.10.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:atomicfu-common:0.12.9.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:annotations:13.0.classpath"/>
+    <path refid="library.gradle:_junit:junit:4.12.classpath"/>
+    <path refid="library.gradle:_com.sun.mail:javax.mail:1.5.6.classpath"/>
+    <path refid="library.gradle:_org.apache.pdfbox:fontbox:2.0.13.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-core:1.2.3.classpath"/>
+    <path refid="library.gradle:_com.google.code.gson:gson:2.8.5.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-html-jvm:0.6.12.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-epoll:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-kqueue:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_org.eclipse.jetty.alpn:alpn-api:1.1.3.v20160715.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec-http2:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-host-common:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-io-jvm:0.1.10.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-io-jvm:0.1.10.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.2.2.classpath"/>
+    <path refid="library.gradle:_com.typesafe:config:1.3.1.classpath"/>
+    <path refid="library.gradle:_org.slf4j:slf4j-api:1.7.25.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:atomicfu:0.12.9.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-junit:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.apache.commons:commons-email:1.5.classpath"/>
+    <path refid="library.gradle:_org.apache.pdfbox:pdfbox:2.0.13.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-classic:1.2.3.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-gson:1.2.2.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-html-builder:1.2.2.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-netty:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-annotations-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.41.classpath"/>
+    <pathelement location="${aipr.jvmmain.output.dir}"/>
+    <pathelement location="${aipr.commontest.testoutput.dir}"/>
+    <pathelement location="${aipr.commontest.output.dir}"/>
+  </path>
+  
+  <path id="aipr.jvmtest.runtime.module.classpath">
+    <pathelement location="${aipr.jvmtest.testoutput.dir}"/>
+    <path refid="aipr.commonmain.runtime.module.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-resolver:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-network:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-reflect:1.3.40.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-http-jvm:1.2.2.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-utils-jvm:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+    <path refid="library.gradle:_javax.activation:activation:1.1.classpath"/>
+    <path refid="library.gradle:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-unix-common:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec-http:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-handler:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-buffer:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-common:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-http-cio-jvm:1.2.2.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-core:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-io:0.1.10.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core-common:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-io:0.1.10.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:atomicfu-common:0.12.9.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:annotations:13.0.classpath"/>
+    <path refid="library.gradle:_junit:junit:4.12.classpath"/>
+    <path refid="library.gradle:_com.sun.mail:javax.mail:1.5.6.classpath"/>
+    <path refid="library.gradle:_org.apache.pdfbox:fontbox:2.0.13.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-core:1.2.3.classpath"/>
+    <path refid="library.gradle:_com.google.code.gson:gson:2.8.5.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-html-jvm:0.6.12.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-epoll:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-transport-native-kqueue:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_org.eclipse.jetty.alpn:alpn-api:1.1.3.v20160715.classpath"/>
+    <path refid="library.gradle:_io.netty:netty-codec-http2:4.1.36.final.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-host-common:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-io-jvm:0.1.10.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-io-jvm:0.1.10.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.2.2.classpath"/>
+    <path refid="library.gradle:_com.typesafe:config:1.3.1.classpath"/>
+    <path refid="library.gradle:_org.slf4j:slf4j-api:1.7.25.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlinx:atomicfu:0.12.9.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-junit:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.apache.commons:commons-email:1.5.classpath"/>
+    <path refid="library.gradle:_org.apache.pdfbox:pdfbox:2.0.13.classpath"/>
+    <path refid="library.gradle:_ch.qos.logback:logback-classic:1.2.3.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-gson:1.2.2.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-html-builder:1.2.2.classpath"/>
+    <path refid="library.gradle:_io.ktor:ktor-server-netty:1.2.2.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-annotations-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.41.classpath"/>
+    <path refid="aipr.jvmmain.runtime.module.classpath"/>
+    <path refid="aipr.commontest.runtime.module.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.aipr.jvmtest">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.aipr.jvmtest">
+    <patternset refid="excluded.from.module.aipr.jvmtest"/>
+  </patternset>
+  
+  <path id="aipr.jvmtest.module.test.sourcepath">
+    <dirset dir="${module.aipr.jvmtest.basedir}/src/jvmTest">
+      <include name="kotlin"/>
+      <include name="resources"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.aipr.jvmtest" depends="compile.module.aipr.jvmtest.production,compile.module.aipr.jvmtest.tests" description="Compile module aipr.jvmTest"/>
+  
+  <target name="compile.module.aipr.jvmtest.production" depends="register.custom.compilers,compile.module.aipr.commonmain,compile.module.aipr.jvmmain,compile.module.aipr.commontest" description="Compile module aipr.jvmTest; production classes"/>
+  
+  <target name="compile.module.aipr.jvmtest.tests" depends="register.custom.compilers,compile.module.aipr.jvmtest.production" description="compile module aipr.jvmTest; test classes" unless="skip.tests">
+    <mkdir dir="${aipr.jvmtest.testoutput.dir}"/>
+    <javac2 destdir="${aipr.jvmtest.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.aipr.jvmtest}/javac">
+      <compilerarg line="${compiler.args.aipr.jvmtest}"/>
+      <bootclasspath refid="aipr.jvmtest.module.bootclasspath"/>
+      <classpath refid="aipr.jvmtest.module.classpath"/>
+      <src refid="aipr.jvmtest.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.aipr.jvmtest"/>
+    </javac2>
+    
+    <copy todir="${aipr.jvmtest.testoutput.dir}">
+      <fileset dir="${module.aipr.jvmtest.basedir}/src/jvmTest/kotlin">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.aipr.jvmtest.basedir}/src/jvmTest/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.aipr.jvmtest" description="cleanup module">
+    <delete dir="${aipr.jvmtest.output.dir}"/>
+    <delete dir="${aipr.jvmtest.testoutput.dir}"/>
+  </target>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.aipr, clean.module.aipr.commonmain, clean.module.aipr.main, clean.module.aipr.test, clean.module.aipr.commontest, clean.module.aipr.jsmain, clean.module.aipr.jvmmain, clean.module.aipr.jstest, clean.module.aipr.jvmtest" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.module.aipr, compile.module.aipr.commonmain, compile.module.aipr.main, compile.module.aipr.test, compile.module.aipr.commontest, compile.module.aipr.jsmain, compile.module.aipr.jvmmain, compile.module.aipr.jstest, compile.module.aipr.jvmtest" description="build all modules"/>
+  
+  <target name="init.artifacts">
+    <property name="artifacts.temp.dir" value="${basedir}/__artifacts_temp"/>
+    <property name="artifact.output.aipr-js" value="${basedir}/build/libs"/>
+    <property name="artifact.output.aipr-jvm" value="${basedir}/build/libs"/>
+    <mkdir dir="${artifacts.temp.dir}"/>
+    <property name="temp.jar.path.aipr-js.jar" value="${artifacts.temp.dir}/aipr-js.jar"/>
+    <property name="temp.jar.path.aipr-jvm.jar" value="${artifacts.temp.dir}/aipr-jvm.jar"/>
+  </target>
+  
+  <target name="artifact.aipr-js" depends="init.artifacts, compile.module.aipr.jsmain" description="Build &#39;aipr-js&#39; artifact">
+    <property name="artifact.temp.output.aipr-js" value="${artifacts.temp.dir}/aipr_js"/>
+    <mkdir dir="${artifact.temp.output.aipr-js}"/>
+    <jar destfile="${temp.jar.path.aipr-js.jar}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${aipr.jsmain.output.dir}"/>
+    </jar>
+    <copy file="${temp.jar.path.aipr-js.jar}" tofile="${artifact.temp.output.aipr-js}/aipr-js.jar"/>
+  </target>
+  
+  <target name="artifact.aipr-jvm" depends="init.artifacts, compile.module.aipr.jvmmain" description="Build &#39;aipr-jvm&#39; artifact">
+    <property name="artifact.temp.output.aipr-jvm" value="${artifacts.temp.dir}/aipr_jvm"/>
+    <mkdir dir="${artifact.temp.output.aipr-jvm}"/>
+    <jar destfile="${temp.jar.path.aipr-jvm.jar}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${aipr.jvmmain.output.dir}"/>
+    </jar>
+    <copy file="${temp.jar.path.aipr-jvm.jar}" tofile="${artifact.temp.output.aipr-jvm}/aipr-jvm.jar"/>
+  </target>
+  
+  <target name="build.all.artifacts" depends="artifact.aipr-js, artifact.aipr-jvm" description="Build all artifacts">
+    <mkdir dir="${artifact.output.aipr-js}"/>
+    <copy todir="${artifact.output.aipr-js}">
+      <fileset dir="${artifact.temp.output.aipr-js}"/>
+    </copy>
+    <mkdir dir="${artifact.output.aipr-jvm}"/>
+    <copy todir="${artifact.output.aipr-jvm}">
+      <fileset dir="${artifact.temp.output.aipr-jvm}"/>
+    </copy>
+    
+    <!-- Delete temporary files -->
+    <delete dir="${artifacts.temp.dir}"/>
+  </target>
+  
+  <target name="all" depends="build.modules, build.all.artifacts" description="build all"/>
+</project>
