@@ -2,8 +2,7 @@
   "main": "kotlin/aipr-test.js",
   "devDependencies": {},
   "dependencies": {
-    "kotlin-test": "1.3.41",
-    "kotlin": "1.3.41"
+    "kotlin-test": "1.3.41"
   },
   "name": "aipr-test",
   "version": "0.0.0-unspecified"

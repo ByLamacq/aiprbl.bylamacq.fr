@@ -5,8 +5,8 @@
       <configuration version="3" platform="JavaScript " useProjectSettings="false" isTestModule="true" externalProjectId="aipr">
         <sourceSets>
           <sourceSet>aipr.commonMain</sourceSet>
-          <sourceSet>aipr.commonTest</sourceSet>
           <sourceSet>aipr.jsMain</sourceSet>
+          <sourceSet>aipr.commonTest</sourceSet>
         </sourceSets>
         <newMppModelJpsModuleKind>COMPILATION_AND_SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
         <compilerSettings />

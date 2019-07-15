@@ -1,0 +1,201 @@
+<resources>
+    <string name="app_name">AIPR MP</string>
+    <string name="app_version">Version : 2019.05.110</string>
+
+
+    <string name="splashscreen_txt_loading">Chargement&#8230;</string>
+    <string name="splashscreen_register">Nouvel utilisateur</string>
+    <string name="splashscreen_login">Selectionner utilisateur</string>
+    <string name="splashscreen_recyclerview">Selectionner utilisateur :</string>
+    <string name="splashscreen_or">Ou</string>
+
+    <string name="newuser_lastname">Nom de famille</string>
+    <string name="newuser_firstname">Prénom</string>
+    <string name="newuser_email">Email</string>
+    <string name="newuser_validat">Valider</string>
+
+    <string name="title_home">Accueil</string>
+    <string name="title_dashboard">Tableau de bord</string>
+    <string name="title_map">Carte</string>
+    <string name="title_contactes">Contactes</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_settings">Options</string>
+
+    <string name="main_settings">Options</string>
+    <string name="main_refresh">Actualiser</string>
+    <string name="main_upload">Importer</string>
+    <string name="main_error">Données manquantes</string>
+
+    <string name="contactes_dt">Mes DTs</string>
+    <string name="contactes_files">Mes fichiers source</string>
+    <string name="contactes_primecontractor">Maîtres d\'oeuvres</string>
+    <string name="contactes_project">Mes projets</string>
+    <string name="contactes_projectmanager">Responsables de projet</string>
+    <string name="contactes_projectowner">Maîtres d\'ouvrages</string>
+    <string name="contactes_structure">Ouvrages</string>
+    <string name="contactes_user">Utilisateurs</string>
+
+    <string name="updatedb_title">Fichiers trouvés :</string>
+    <string name="updatedb_validat">Ignorer</string>
+
+    <string name="newproject_title">Projet</string>
+    <string name="newproject_name">Nom du projet</string>
+    <string name="newproject_project_number">Numéro / Identifiant</string>
+    <string name="newproject_address">Adresse du projet</string>
+    <string name="newproject_postal_code">Code postal</string>
+    <string name="newproject_city">Ville</string>
+    <string name="newproject_description">Description du projet</string>
+
+    <string name="newprojectowner_entity">Entité</string>
+    <string name="newprojectowner_name">Nom du Maître d\'ouvrage</string>
+    <string name="newprojectowner_service">Service</string>
+    <string name="newprojectowner_address">Adresse</string>
+    <string name="newprojectowner_postal_code">Code postal</string>
+    <string name="newprojectowner_city">Ville</string>
+    <string name="newprojectowner_phone">Téléphone</string>
+    <string name="newprojectowner_country">Pays</string>
+
+    <string name="newdt_title">Déclaration de travaux</string>
+    <string name="newdt_number">Numéro</string>
+    <string name="newdt_creation_date">Date de création</string>
+    <string name="newdt_geographique_projection">Système des coordonnées géographiques</string>
+    <string name="newdt_geographique_coordonates">Coordonnées géographiques</string>
+    <string name="newdt_nature_work">Nature des travaux</string>
+    <string name="newdt_start_date">Date de démmarrage des travaux</string>
+    <string name="newdt_duration">Durée prévisionnel des travaux</string>
+
+    <string name="setting_title">Plus</string>
+    <string name="setting_information">Vos informations</string>
+    <string name="setting_information_firstname">Prenom :</string>
+    <string name="setting_information_lastname">Nom :</string>
+    <string name="setting_information_email">E-mail :</string>
+    <string name="setting_setting">Paramètres</string>
+    <string name="setting_app">Application</string>
+    <string name="setting_null">Nothing to show</string>
+
+    <string name="user_title">Utilisateur</string>
+    <string name="user_update">Mettre à jour</string>
+
+    <string name="project_title">Projet</string>
+    <string name="project_name">Nom du projet</string>
+    <string name="project_project_number">Numéro / Identifiant</string>
+    <string name="project_address">Adresse du projet</string>
+    <string name="project_postal_code">Code postal</string>
+    <string name="project_city">Ville</string>
+    <string name="project_description">Description du projet</string>
+
+    <string name="dt_title">Déclaration de travaux</string>
+    <string name="dt_null">Nothing to show&#8230;</string>
+    <string name="dt_number">Numero / Désignation</string>
+    <string name="dt_creation_date">Date de création</string>
+    <string name="dt_geographique_projection">Système de projection géographique</string>
+    <string name="dt_geographique_coordonates">Coordonnées géographiques</string>
+    <string name="dt_nature_work">Nature des travaux</string>
+    <string name="dt_start_date">Date de début des travaux</string>
+    <string name="dt_duration">Durée des travaux</string>
+    <string name="dt_structure_ids">Concessionnaires identifiés sur site</string>
+    <string name="dt_project_id">Nom du projet</string>
+    <string name="dt_cardview_title">Déclaration de travaux</string>
+    <string name="dt_cardview_number">Numero :</string>
+    <string name="dt_cardview_creation_date">Date de création :</string>
+    <string name="dt_cardview_geographique_projection">Système de projection géographique :</string>
+    <string name="dt_cardview_geographique_coordonates">Coordonnées géographiques :</string>
+    <string name="dt_cardview_nature_work">Nature des travaux :</string>
+    <string name="dt_cardview_start_date">Date de début des travaux :</string>
+    <string name="dt_cardview_duration">Durée des travaux :</string>
+    <string name="dt_cardview_structure_ids">Concessionnaires :</string>
+    <string name="dt_cardview_project_id">Nom du projet :</string>
+
+    <string name="projectowner_title">Maître d\'ouvrage</string>
+    <string name="projectowner_null">Nothing to show&#8230;</string>
+    <string name="projectowner_entity">Entité</string>
+    <string name="projectowner_name">Nom du Maître d\'ouvrage</string>
+    <string name="projectowner_service">Service</string>
+    <string name="projectowner_address">Adresse</string>
+    <string name="projectowner_postal_code">Code postal</string>
+    <string name="projectowner_city">Ville</string>
+    <string name="projectowner_phone">Téléphone</string>
+    <string name="projectowner_country">Pays</string>
+    <string name="projectowner_cardview_title">Maître d\'ouvrage</string>
+    <string name="projectowner_cardview_entity">Entité :</string>
+    <string name="projectowner_cardview_name">Nom :</string>
+    <string name="projectowner_cardview_service">Service :</string>
+    <string name="projectowner_cardview_address">Adresse :</string>
+    <string name="projectowner_cardview_postal_code">Code postal :</string>
+    <string name="projectowner_cardview_city">Ville :</string>
+    <string name="projectowner_cardview_phone">Téléphone :</string>
+    <string name="projectowner_cardview_country">Pays :</string>
+
+    <string name="file_title">
+        <u>
+            <b>Fichier descripteur</b>
+        </u>
+    </string>
+    <string name="file_name">Nom du fichier</string>
+    <string name="file_consultation_type">Nature de la consultation</string>
+    <string name="file_consultation_number">Numéro / Désignation de la consultation</string>
+    <string name="file_registred">Statut du fichier</string>
+    <string name="file_registred_yes">Enregistré</string>
+    <string name="file_registred_no">En attente</string>
+
+    <string name="projectmanager_title">Représentant du maître d\'ouvrage</string>
+    <string name="projectmanager_null">Nothing to show&#8230;</string>
+    <string name="projectmanager_name">Entité représentante du maître d\'ouvrage</string>
+    <string name="projectmanager_service">Service</string>
+    <string name="projectmanager_address">Adresse</string>
+    <string name="projectmanager_postal_code">Code postal</string>
+    <string name="projectmanager_city">Ville</string>
+    <string name="projectmanager_manager">Nom du représentant du maître d\'ouvrage</string>
+    <string name="projectmanager_phone">Téléphone fixe</string>
+    <string name="projectmanager_mobile">Téléphone portable</string>
+    <string name="projectmanager_email">Email</string>
+    <string name="projectmanager_cardview_title">Représentant du maître d\'ouvrage</string>
+    <string name="projectmanager_cardview_name">Entité :</string>
+    <string name="projectmanager_cardview_service">Service :</string>
+    <string name="projectmanager_cardview_address">Adresse :</string>
+    <string name="projectmanager_cardview_postal_code">Code postal :</string>
+    <string name="projectmanager_cardview_city">Ville :</string>
+    <string name="projectmanager_cardview_manager">Représentant :</string>
+    <string name="projectmanager_cardview_phone">Tél. fixe :</string>
+    <string name="projectmanager_cardview_mobile">Tél. mobile :</string>
+    <string name="projectmanager_cardview_email">Email :</string>
+
+    <string name="primecontractor_title">Maître d\'oeuvre</string>
+    <string name="primecontractor_null">Nothing to show&#8230;</string>
+    <string name="primecontractor_name">Nom du maître d\'oeuvre</string>
+    <string name="primecontractor_service">Service</string>
+    <string name="primecontractor_address">Adresse</string>
+    <string name="primecontractor_postal_code">Code postal</string>
+    <string name="primecontractor_city">Ville</string>
+    <string name="primecontractor_manager">Nom du représentant du maître d\'oeuvre</string>
+    <string name="primecontractor_phone">Téléphone fixe</string>
+    <string name="primecontractor_mobile">Téléphone portable</string>
+    <string name="primecontractor_email">Email</string>
+    <string name="primecontractor_cardview_title">Maître d\'oeuvre</string>
+    <string name="primecontractor_cardview_name">Entité :</string>
+    <string name="primecontractor_cardview_service">Service :</string>
+    <string name="primecontractor_cardview_address">Adresse :</string>
+    <string name="primecontractor_cardview_postal_code">Code postal :</string>
+    <string name="primecontractor_cardview_city">Ville :</string>
+    <string name="primecontractor_cardview_manager">Représentant :</string>
+    <string name="primecontractor_cardview_phone">Tél. fixe :</string>
+    <string name="primecontractor_cardview_mobile">Tél. mobile :</string>
+    <string name="primecontractor_cardview_email">Email :</string>
+
+    <string name="success_title">Opération réussie !</string>
+    <string name="success_button">Terminer</string>
+
+    <string name="home_title">Tableau de bord</string>
+    <string name="home_recyclerview">Mes Projets en cours</string>
+    <string name="home_null">Nothing to show&#8230;</string>
+
+    <string name="report_title">Compte rendu</string>
+    <string name="report_recyclerview">Mes compte rendu</string>
+    <string name="report_null">Nothing to show&#8230;</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_project">ProjectActivity</string>
+    <string name="title_activity_report">ReportActivity</string>
+
+</resources>
