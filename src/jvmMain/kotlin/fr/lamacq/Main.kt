@@ -49,7 +49,7 @@ actual object Platform {
 
 fun main() {
     val port = Integer.valueOf(System.getenv("PORT")) ?: 8080 //embeddedServer(Netty, port = 8080, host = "127.0.0.1")
-    embeddedServer(Netty, port = port, host = "127.0.0.1") {
+    embeddedServer(Netty, port = port, host = "0.0.0.0") {
         val currentDir = File(".").absoluteFile
         environment.log.info("Current directory: $currentDir")
 
